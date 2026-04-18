@@ -1,0 +1,120 @@
+/* --- Login Page Specific Styles --- */
+.login-page {
+    background-color: #f5f5f5;
+    background-image: radial-gradient(#d1d1d1 0.5px, transparent 0.5px);
+    background-size: 20px 20px; /* Creates the light diagonal/dot pattern */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 450px;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.login-header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.login-header p {
+    color: #888;
+    font-size: 1.1rem;
+}
+
+.login-card {
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.login-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #777;
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+}
+
+/* Form Styling */
+.input-icon-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center
+}
+
+.input-icon {
+    position: absolute;
+    left: 14px;
+    font-size: 1.1rem;
+    pointer-events: none; /* User clicks 'through' icon into the input */
+    display: flex;
+    align-items: center;
+}
+
+.login-card select, 
+.login-card input {
+        width: 100%; /* Spans the full width of the card padding */
+    padding: 12px 12px 12px 42px; /* Extra left padding to make room for icon */
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Forces input to stay inside its boundaries */
+    outline: none;
+    transition: border-color 0.2s;
+}
+.login-card input:focus {
+    border-color: #ef9a9a;
+}
+
+.login-card select {
+    padding-left: 12px;
+    appearance: none; /* Removes default browser styling */
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://w3.org' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 1em;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 14px;
+    background-color: #ef9a9a; /* Matching the soft red in your image */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-login:hover {
+    background-color: #e57373;
+}
+
+.login-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    font-size: 0.9rem;
+}
+
+.forgot-link { color: #888; text-decoration: none; }
+.back-link { color: #d32f2f; text-decoration: none; font-weight: 600; }
