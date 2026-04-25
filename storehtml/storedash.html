@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyondo Inventory Management</title>
+    <link rel="stylesheet" href="../storecss/storedash.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="brand-section">
+                <div class="brand-logo">🏢</div>
+                <div class="brand-details">
+                    <h1>NYONDO</h1>
+                    <p>Store Manager</p>
+                </div>
+            </div>
+            
+            <nav class="side-nav">
+                <a href="#" class="nav-item active">Dashboard</a>
+                <a href="#" class="nav-item">Stock Registration</a>
+                <a href="#" class="nav-item">Inventory</a>
+                <a href="#" class="nav-item">Pricing</a>
+            </nav>
+
+            <a href="#" class="logout-link">Logout</a>
+        </aside>
+
+        <!-- Main Dashboard Content -->
+        <main class="main-content">
+            <header class="top-header">
+                <div class="title-group">
+                    <h2>Inventory Dashboard</h2>
+                    <p>Saturday, April 25, 2026</p>
+                </div>
+                <div class="user-control">
+                    <span class="notif-icon">🔔</span>
+                    <div class="user-info">
+                        <strong>Robert Okello</strong>
+                        <span>Store Manager</span>
+                    </div>
+                    <div class="avatar">👤</div>
+                </div>
+            </header>
+
+            <!-- Dashboard Summary Widgets -->
+            <div class="summary-grid">
+                <div class="stat-card">
+                    <span class="card-icon red-tint">📦</span>
+                    <p class="label">Total Products</p>
+                    <h3 class="value">7</h3>
+                </div>
+                <div class="stat-card">
+                    <span class="card-icon red-tint">📈</span>
+                    <span class="badge green">In Stock</span>
+                    <p class="label">Total Quantity</p>
+                    <h3 class="value">1,375</h3>
+                </div>
+                <div class="stat-card">
+                    <span class="card-icon red-tint">$</span>
+                    <p class="label">Inventory Value</p>
+                    <h3 class="value">46.8M UGX</h3>
+                </div>
+                <div class="stat-card">
+                    <span class="card-icon red-tint">⚠️</span>
+                    <span class="badge red">Alert</span>
+                    <p class="label">Low Stock Items</p>
+                    <h3 class="value danger-text">1</h3>
+                </div>
+            </div>
+
+            <!-- Low Stock Notification Panel -->
+            <div class="alert-box">
+                <div class="alert-header">
+                    <span class="alert-icon-main">⚠️</span>
+                    <div class="alert-text">
+                        <h4>Low Stock Alert</h4>
+                        <p>The following items are running low and need restocking soon:</p>
+                    </div>
+                </div>
+                <div class="alert-item">
+                    <div class="item-desc">
+                        <strong>Barbed Wire (50m roll)</strong>
+                        <p>Current stock: 45 units</p>
+                    </div>
+                    <button class="btn-restock">Restock Now</button>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

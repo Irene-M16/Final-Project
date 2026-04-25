@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, sans-serif;
+}
+
+:root {
+    --primary-red: #e11d48;
+    --sidebar-gray: #6b7280;
+    --bg-light: #f9fafb;
+    --border-color: #f3f4f6;
+}
+
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+    background: white;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 280px;
+    border-right: 1px solid var(--border-color);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-section {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+.brand-logo {
+    background: var(--primary-red);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.side-nav {
+    flex-grow: 1;
+}
+
+.nav-item {
+    display: block;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: #374151;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.nav-item.active {
+    background: var(--primary-red);
+    color: white;
+}
+
+/* Main Layout */
+.main-content {
+    flex: 1;
+    padding: 40px;
+    background: var(--bg-light);
+}
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+/* Summary Grid */
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.stat-card {
+    background: white;
+    padding: 24px;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    position: relative;
+}
+
+.card-icon {
+    font-size: 24px;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.badge {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    font-size: 11px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    border: 1px solid transparent;
+}
+
+.badge.green { color: #059669; background: #ecfdf5; border-color: #10b981; }
+.badge.red { color: #dc2626; background: #fef2f2; border-color: #ef4444; }
+
+/* Alert Section */
+.alert-box {
+    background: #fff5f5;
+    border: 1px solid #fee2e2;
+    border-radius: 16px;
+    padding: 24px;
+}
+
+.alert-item {
+    background: white;
+    margin-top: 16px;
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-restock {
+    background: var(--primary-red);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.danger-text { color: var(--primary-red); }

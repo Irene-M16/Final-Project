@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #525659; /* Classic PDF viewer background color */
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Container to hold the paper */
+.receipt-container {
+    background: white;
+    width: 210mm; /* A4 Width */
+    min-height: 297mm; /* A4 Height */
+    padding: 60px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+/* Action Bar at the top */
+.print-actions {
+    width: 210mm;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.print-btn {
+    background: #d32f2f;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.back-link {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Header */
+.receipt-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.company-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-box {
+    background: #d32f2f;
+    color: white;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    font-size: 24px;
+}
+
+.company-info h1 {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.invoice-meta {
+    text-align: right;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Billing & Status */
+.billing-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.label {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #999;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.customer-name {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.status-badge {
+    background: #e8f5e9;
+    color: #2e7d32;
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 11px;
+}
+
+/* Table */
+.items-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+.items-table th {
+    text-align: left;
+    background: #fafafa;
+    border-bottom: 1px solid #eee;
+    padding: 12px;
+    font-size: 12px;
+    color: #666;
+}
+
+.items-table td {
+    padding: 15px 12px;
+    border-bottom: 1px solid #f9f9f9;
+    font-size: 14px;
+}
+
+.qty { text-align: center; }
+.price, .total { text-align: right; }
+
+/* Totals Area */
+.summary-section {
+    width: 300px;
+    margin-left: auto;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    font-size: 14px;
+}
+
+.grand-total {
+    border-top: 2px solid #d32f2f;
+    margin-top: 10px;
+    padding-top: 15px;
+    font-weight: 800;
+    font-size: 18px;
+    color: #d32f2f;
+}
+
+.free { color: #2e7d32; font-weight: 600; }
+
+/* Footer */
+.receipt-footer {
+    margin-top: 100px;
+    text-align: center;
+    border-top: 1px solid #eee;
+    padding-top: 30px;
+}
+
+.terms {
+    font-size: 12px;
+    color: #999;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+/* PRINT LOGIC: Hide UI when printing */
+@media print {
+    body { background: white; padding: 0; }
+    .no-print { display: none !important; }
+    .receipt-container { 
+        box-shadow: none; 
+        width: 100%; 
+        padding: 0; 
+        margin: 0;
+    }
+}
