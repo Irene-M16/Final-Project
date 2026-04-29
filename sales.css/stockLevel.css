@@ -1,0 +1,243 @@
+/* Sidebar and Header styles remain consistent with previous pages */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333333;
+}
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 240px;
+    background: #ffffff;
+    border-right: 1px solid #eeeeee;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    position: fixed;
+    height: 100vh;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    padding: 0 20px 30px;
+    gap: 12px;
+}
+
+.logo-icon {
+    background: #d32f2f;
+    color: #ffffff;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+.brand-name {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.brand-sub {
+    font-size: 11px;
+    color: #888888;
+}
+
+.nav-menu {
+    flex-grow: 1;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #555555;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 4px 15px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.nav-item.active {
+    background: #d32f2f;
+    color: #ffffff;
+}
+
+.nav-item:hover:not(.active) {
+    background: #f0f0f0;
+}
+
+.nav-item .icon {
+    margin-right: 12px;
+}
+
+.sidebar-footer {
+    border-top: 1px solid #eeeeee;
+    padding-top: 10px;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 30px;
+    margin-left: 240px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.date-text {
+    color: #888888;
+    font-size: 14px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-info {
+    text-align: right;
+}
+
+.user-name {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.user-role {
+    font-size: 12px;
+    color: #888888;
+}
+
+.user-avatar {
+    width: 35px;
+    height: 35px;
+    background: #d32f2f;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Stock Table Specific Styles */
+.table-section {
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #eeeeee;
+    padding: 25px;
+}
+
+.table-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.section-title {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Search Bar Styling */
+.search-container {
+    position: relative;
+    width: 280px;
+}
+
+.search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888888;
+    font-size: 14px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px 10px 10px 35px;
+    border: 1px solid #eeeeee;
+    border-radius: 8px;
+    background: #fafafa;
+    font-size: 13px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.search-input:focus {
+    border-color: #d32f2f;
+    background: #ffffff;
+}
+
+/* Table Design */
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    font-size: 12px;
+    color: #888888;
+    font-weight: 500;
+    padding: 15px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+td {
+    padding: 18px 15px;
+    font-size: 13px;
+    border-bottom: 1px solid #f9f9f9;
+}
+
+/* Status Pills */
+.status-pill {
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.status-pill.success {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.status-pill.warning {
+    background: #fff3e0;
+    color: #ef6c00;
+}

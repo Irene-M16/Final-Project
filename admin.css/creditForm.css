@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #fcfcfc;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.form-container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 900px;
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid #eeeeee;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+}
+
+.form-header {
+    margin-bottom: 40px;
+    border-bottom: 2px solid #f8f9fa;
+    padding-bottom: 20px;
+}
+
+.form-header h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #333333;
+}
+
+.form-header p {
+    font-size: 14px;
+    color: #666666;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    align-items: start;
+    margin-bottom: 25px;
+    gap: 20px;
+}
+
+.form-row label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333333;
+    padding-top: 12px;
+}
+
+.form-row label em {
+    font-style: normal;
+    font-weight: 400;
+    color: #888888;
+    display: block;
+    font-size: 12px;
+}
+
+input, textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px 15px;
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+    font-size: 14px;
+    background: #fafafa;
+    outline: none;
+    transition: 0.2s;
+}
+
+textarea { height: 80px; resize: vertical; }
+
+input:focus, textarea:focus {
+    border-color: #d32f2f;
+    background: #ffffff;
+}
+
+/* Balance and Due Date Highlights */
+.balance-input {
+    color: #d32f2f;
+    font-weight: 700;
+    border: 1px solid #ffa39e;
+    background: #fff1f0;
+}
+
+.highlight-date {
+    border-left: 5px solid #d32f2f;
+    font-weight: 600;
+}
+
+/* Buttons */
+.form-footer {
+    display: flex;
+    gap: 15px;
+    padding-top: 20px;
+}
+
+.btn-submit {
+    background: #d32f2f;
+    color: #ffffff;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn-submit:hover { background: #b71c1c; }
+
+.btn-clear {
+    background: #ffffff;
+    color: #555555;
+    border: 1px solid #eeeeee;
+    padding: 14px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyondo Admin - User Management</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="../admin.css/userReg.css">
+</head>
+<body>
+
+    <div class="page-wrapper">
+        <!-- Sidebar: EXACT same layout as Dashboard -->
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="logo-section">
+                    <div class="logo-icon">🏢</div>
+                    <div>
+                        <h1 class="brand-name">NYONDO</h1>
+                        <p class="brand-sub">Admin Portal</p>
+                    </div>
+                </div>
+
+                <nav class="nav-menu">
+                    <a href="adminDash.html" class="nav-item"><span class="icon">📊</span> Dashboard</a>
+                    <a href="userReg.html" class="nav-item active"><span class="icon">👥</span> Users</a>
+                    <a href="supplier.html" class="nav-item"><span class="icon">💳</span> Supplier Credit</a>
+                    <a href="#" class="nav-item"><span class="icon">🏦</span> Deposit Scheme</a>
+                    <a href="#" class="nav-item"><span class="icon">🚛</span> Transport Charges</a>
+                    <a href="#" class="nav-item"><span class="icon">📋</span> Reports</a>
+                </nav>
+            </div>
+
+            <!-- Logout: Natural scroll at the bottom -->
+            <div class="sidebar-bottom">
+                <a href="#" class="nav-item logout-link">
+                    <span class="icon">↪️</span> Logout
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="header">
+                <div class="header-left">
+                    <h2>User Management</h2>
+                    <p class="date-text">Wednesday, April 29, 2026</p>
+                </div>
+                <div class="header-right">
+                    <div class="user-profile">
+                        <div class="user-info">
+                            <span class="user-name">David Musoke</span>
+                            <span class="user-role">Administrator</span>
+                        </div>
+                        <div class="user-avatar">👤</div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Table Controls -->
+            <section class="table-controls">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Search users by name or role...">
+                </div>
+                <a href="addUser.html" class="primary-btn">+ Add New User</a>
+            </section>
+
+            <!-- Users Table -->
+            <section class="table-card">
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>User Name</th>
+                                <th>Role</th>
+                                <th>Email Address</th>
+                                <th>Contact</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>David Musoke</strong></td>
+                                <td>Administrator</td>
+                                <td>david.musoke@nyondo.com</td>
+                                <td>+256 701 111 222</td>
+                                <td><span class="status-pill active">Active</span></td>
+                                <td><a href="#" class="edit-link">Edit</a></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Robert Okello</strong></td>
+                                <td>Store Manager</td>
+                                <td>robert.okello@nyondo.com</td>
+                                <td>+256 702 333 444</td>
+                                <td><span class="status-pill active">Active</span></td>
+                                <td><a href="#" class="edit-link">Edit</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>

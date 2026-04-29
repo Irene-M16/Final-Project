@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Registration</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="../storecss/stockreg.css">
+</head>
+<body>
+
+<div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo-section">
+            <div class="logo-icon">🏢</div>
+            <div>
+                <h1 class="brand-name">NYONDO</h1>
+                <p class="brand-sub">Store Manager</p>
+            </div>
+        </div>
+
+        <nav class="nav-menu">
+            <a href="storedash.html" class="nav-item">
+                <span class="icon">📊</span> Dashboard
+            </a>
+            <a href="stockreg.html" class="nav-item active">
+                <span class="icon">➕</span> Stock Registration
+            </a>
+            <a href="invetory.html" class="nav-item">
+                <span class="icon">📦</span> Inventory
+            </a>
+            <a href="price.html" class="nav-item">
+                <span class="icon">💲</span> Pricing
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="../html/index.html" class="nav-item">
+                <span class="icon">↪️</span> Logout
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="header">
+            <div class="header-left">
+                <h2>Stock Registration</h2>
+                <p class="date-text">Tuesday, April 28, 2026</p>
+            </div>
+            <div class="header-right">
+                <div class="notification-bell">🔔</div>
+                <div class="user-profile">
+                    <div class="user-info">
+                        <span class="user-name">Robert Okello</span>
+                        <span class="user-role">Store Manager</span>
+                    </div>
+                    <div class="user-avatar">👤</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Registration Form Container -->
+        <section class="form-card">
+            <h3>Register New Stock</h3>
+            
+            <form id="stockForm" class="registration-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Product Type</label>
+                        <select name="product">
+                            <option disabled>Select product</option>
+                            <option>Cement</option>
+                            <option>Hammer</option>
+                            <option>Iron Sheets</option>
+                            <option>Paint</option>
+                            <option>Tiles</option>
+                            <option>Wires</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Quantity</label>
+                        <input type="text" name="quantity" placeholder="Enter quantity" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Unit Cost (UGX)</label>
+                        <input type="text" name="unitCost" placeholder="Purchase price per unit" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Unit Selling Price (UGX)</label>
+                        <input type="text" name="sellingPrice" placeholder="Selling price per unit" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Supplier</label>
+                        <select name="supplier">
+                            <option disabled>Select supplier</option>
+                            <option>Cement</option>
+                            <option>Hammer</option>
+                            <option>Iron Sheets</option>
+                            <option>Paint</option>
+                            <option>Brush</option>
+                            <option>Wires</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Date Received</label>
+                        <input type="date" name="date" placeholder="mm/dd/yyyy" required>
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label>Notes (Optional)</label>
+                    <input type="text" name="notes" placeholder="Additional information" required>
+                </div>
+
+                <!-- Action Buttons as Anchors -->
+                <div class="form-actions">
+                    <a href="#" class="btn primary-btn">+ Add Stock</a>
+                    <a href="#" class="btn secondary-btn" onclick="document.getElementById('stockForm').reset(); return false;">Clear Form</a>
+                </div>
+            </form>
+        </section>
+    </main>
+</div>
+
+</body>
+</html>

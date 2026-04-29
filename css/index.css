@@ -1,4 +1,4 @@
-/* --- Global Styles --- */
+/*body*/
 * {
     margin: 0;
     padding: 0;
@@ -18,7 +18,7 @@ body {
     padding: 0 20px;
 }
 
-/* --- Components --- */
+/*component*/
 .btn {
     padding: 10px 24px;
     border-radius: 6px;
@@ -52,7 +52,7 @@ body {
     font-size: 1.1rem;
 }
 
-/* --- Navbar --- */
+/*navbar*/
 .navbar {
     border-bottom: 1px solid #f0f0f0;
     padding: 15px 0;
@@ -86,7 +86,7 @@ body {
     font-size: 1.1rem;
 }
 
-/* --- Hero Section --- */
+/*hero*/
 .hero {
     padding: 80px 0;
 }
@@ -149,7 +149,7 @@ h1 {
     font-weight: 500;
 }
 
-/* --- Features Section --- */
+/*features-section*/
 .features {
     background-color: #F8F9FA;
     padding: 80px 0;
@@ -188,7 +188,7 @@ h1 {
     color: #777;
 }
 
-/* --- Roles Section --- */
+/*roles section*/
 .roles {
     padding: 100px 0;
 }
@@ -242,7 +242,7 @@ h1 {
     top: -5px;
 }
 
-/* --- Footer --- */
+/*footer*/
 .footer {
     padding: 40px 0;
     border-top: 1px solid #eee;
@@ -277,7 +277,7 @@ h1 {
     background-color: #474545;
 }
 
-/* --- Responsive Layout --- */
+/*responsive layout*/
 @media (max-width: 768px) {
     .features-grid, .roles-grid, .stats-grid {
         grid-template-columns: 1fr;

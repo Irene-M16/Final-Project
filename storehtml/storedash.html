@@ -3,92 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nyondo Inventory Management</title>
+    <title>Nyondo Inventory Dashboard</title>
+    <link href="https://googleapis.com" rel="stylesheet">
     <link rel="stylesheet" href="../storecss/storedash.css">
 </head>
 <body>
-    <div class="dashboard-container">
-        <!-- Sidebar Navigation -->
-        <aside class="sidebar">
-            <div class="brand-section">
-                <div class="brand-logo">🏢</div>
-                <div class="brand-details">
-                    <h1>NYONDO</h1>
-                    <p>Store Manager</p>
-                </div>
+
+<div class="dashboard-container">
+    <aside class="sidebar">
+        <div class="logo-section">
+            <div class="logo-icon">🏢</div>
+            <div>
+                <h1 class="brand-name">NYONDO</h1>
+                <p class="brand-sub">Store Manager</p>
             </div>
-            
-            <nav class="side-nav">
-                <a href="#" class="nav-item active">Dashboard</a>
-                <a href="#" class="nav-item">Stock Registration</a>
-                <a href="#" class="nav-item">Inventory</a>
-                <a href="#" class="nav-item">Pricing</a>
-            </nav>
+        </div>
 
-            <a href="#" class="logout-link">Logout</a>
-        </aside>
+        <nav class="nav-menu">
+            <a href="storedash.html" class="nav-item active"><span class="icon">📊</span> Dashboard</a>
+            <a href="stockreg.html" class="nav-item"><span class="icon">➕</span> Stock Registration</a>
+            <a href="invetory.html" class="nav-item"><span class="icon">📦</span> Inventory</a>
+            <a href="price.html" class="nav-item"><span class="icon">💲</span> Pricing</a>
+        </nav>
 
-        <!-- Main Dashboard Content -->
-        <main class="main-content">
-            <header class="top-header">
-                <div class="title-group">
-                    <h2>Inventory Dashboard</h2>
-                    <p>Saturday, April 25, 2026</p>
-                </div>
-                <div class="user-control">
-                    <span class="notif-icon">🔔</span>
+        <div class="sidebar-footer">
+            <a href="../html/index.html" class="nav-item"><span class="icon">↪️</span> Logout</a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="header">
+            <div class="header-left">
+                <h2>Inventory Dashboard</h2>
+                <p class="date-text">Tuesday, April 28, 2026</p>
+            </div>
+            <div class="header-right">
+                <div class="notification-bell">🔔</div>
+                <div class="user-profile">
                     <div class="user-info">
-                        <strong>Robert Okello</strong>
-                        <span>Store Manager</span>
+                        <span class="user-name">Robert Okello</span>
+                        <span class="user-role">Store Manager</span>
                     </div>
-                    <div class="avatar">👤</div>
+                    <div class="user-avatar">👤</div>
                 </div>
-            </header>
+            </div>
+        </header>
 
-            <!-- Dashboard Summary Widgets -->
-            <div class="summary-grid">
-                <div class="stat-card">
-                    <span class="card-icon red-tint">📦</span>
-                    <p class="label">Total Products</p>
-                    <h3 class="value">7</h3>
+        <section class="kpi-grid">
+            <div class="card">
+                <div class="card-header"><span class="card-icon">📦</span></div>
+                <p class="card-label">Total Products</p>
+                <h3 class="card-value">7</h3>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-icon">📈</span>
+                    <span class="badge badge-stock">In Stock</span>
                 </div>
-                <div class="stat-card">
-                    <span class="card-icon red-tint">📈</span>
-                    <span class="badge green">In Stock</span>
-                    <p class="label">Total Quantity</p>
-                    <h3 class="value">1,375</h3>
+                <p class="card-label">Total Quantity</p>
+                <h3 class="card-value">1,375</h3>
+            </div>
+            <div class="card">
+                <div class="card-header"><span class="card-icon">$</span></div>
+                <p class="card-label">Inventory Value</p>
+                <h3 class="card-value">46.8M UGX</h3>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-icon">⚠️</span>
+                    <span class="badge badge-alert">Alert</span>
                 </div>
-                <div class="stat-card">
-                    <span class="card-icon red-tint">$</span>
-                    <p class="label">Inventory Value</p>
-                    <h3 class="value">46.8M UGX</h3>
+                <p class="card-label">Low Stock Items</p>
+                <h3 class="card-value alert-text">1</h3>
+            </div>
+        </section>
+
+        <section class="alert-banner">
+            <div class="alert-info">
+                <span class="alert-symbol">⚠️</span>
+                <div>
+                    <h4>Low Stock Alert</h4>
+                    <p>The following items are running low and need restocking soon:</p>
                 </div>
-                <div class="stat-card">
-                    <span class="card-icon red-tint">⚠️</span>
-                    <span class="badge red">Alert</span>
-                    <p class="label">Low Stock Items</p>
-                    <h3 class="value danger-text">1</h3>
+            </div>
+            <div class="alert-action-card">
+                <div class="item-detail">
+                    <strong>Barbed Wire (50m roll)</strong>
+                    <p>Current stock: 45 units</p>
+                </div>
+                <button class="restock-btn">Restock Now</button>
+            </div>
+        </section>
+
+        <section class="charts-row">
+            <div class="chart-box">
+                <div class="chart-header">
+                    <h4>Stock Levels Overview</h4>
+                    <span class="chart-icon">📊</span>
+                </div>
+                <div class="bar-chart">
+                    <div class="bar-wrapper"><div class="bar-fill" style="height: 160px;"></div><span>Cement</span></div>
+                    <div class="bar-wrapper"><div class="bar-fill" style="height: 70px;"></div><span>Iron Bars</span></div>
+                    <div class="bar-wrapper"><div class="bar-fill" style="height: 110px;"></div><span>Nails</span></div>
+                    <div class="bar-wrapper"><div class="bar-fill" style="height: 40px;"></div><span>Wire Mesh</span></div>
+                    <div class="bar-wrapper"><div class="bar-fill" style="height: 20px;"></div><span>Barbed Wire</span></div>
                 </div>
             </div>
 
-            <!-- Low Stock Notification Panel -->
-            <div class="alert-box">
-                <div class="alert-header">
-                    <span class="alert-icon-main">⚠️</span>
-                    <div class="alert-text">
-                        <h4>Low Stock Alert</h4>
-                        <p>The following items are running low and need restocking soon:</p>
+            <div class="chart-box">
+                <div class="chart-header">
+                    <h4>Stock Movement (7 Days)</h4>
+                    <div class="legend">
+                        <span class="dot dot-green"></span> In
+                        <span class="dot dot-red"></span> Out
                     </div>
                 </div>
-                <div class="alert-item">
-                    <div class="item-desc">
-                        <strong>Barbed Wire (50m roll)</strong>
-                        <p>Current stock: 45 units</p>
+                <div class="line-chart-placeholder">
+                    <svg viewBox="0 0 400 150">
+                        <polyline fill="none" stroke="#10b981" stroke-width="3" points="20,100 80,40 140,80 200,30 260,70 320,10 380,90" />
+                        <polyline fill="none" stroke="#d32f2f" stroke-width="3" points="20,120 80,110 140,130 200,90 260,80 320,60 380,120" />
+                    </svg>
+                    <div class="chart-labels">
+                        <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
                     </div>
-                    <button class="btn-restock">Restock Now</button>
                 </div>
             </div>
-        </main>
-    </div>
+        </section>
+    </main>
+</div>
+
 </body>
 </html>

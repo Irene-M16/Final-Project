@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyondo - Inventory Management</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="../storecss/invetory.css">
+</head>
+<body>
+
+<div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo-section">
+            <div class="logo-icon">🏢</div>
+            <div>
+                <h1 class="brand-name">NYONDO</h1>
+                <p class="brand-sub">Store Manager</p>
+            </div>
+        </div>
+
+        <nav class="nav-menu">
+            <a href="storedash.html" class="nav-item">
+                <span class="icon">📊</span> Dashboard
+            </a>
+            <a href="stockreg.html" class="nav-item">
+                <span class="icon">➕</span> Stock Registration
+            </a>
+            <a href="inventory.html" class="nav-item active">
+                <span class="icon">📦</span> Inventory
+            </a>
+            <a href="price.html" class="nav-item">
+                <span class="icon">💲</span> Pricing
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="../html/index.html" class="nav-item">
+                <span class="icon">↪️</span> Logout
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="header">
+            <div class="header-left">
+                <h2>Inventory Management</h2>
+                <p class="date-text">Tuesday, April 28, 2026</p>
+            </div>
+            <div class="header-right">
+                <div class="notification-bell">🔔</div>
+                <div class="user-profile">
+                    <div class="user-info">
+                        <span class="user-name">Robert Okello</span>
+                        <span class="user-role">Store Manager</span>
+                    </div>
+                    <div class="user-avatar">👤</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Table Controls -->
+        <section class="table-controls">
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" placeholder="Search Inventory...">
+            </div>
+            <a href="registration.html" class="btn primary-btn">+ Add New Stock</a>
+        </section>
+
+        <!-- Inventory Table -->
+        <section class="table-card">
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product Name</th>
+                            <th>Quantity</th>
+                            <th>Unit Cost</th>
+                            <th>Unit Price</th>
+                            <th>Supplier</th>
+                            <th>Last Restocked</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cement (50kg bag)</td>
+                            <td>450 units</td>
+                            <td>32,000</td>
+                            <td>35,000</td>
+                            <td>Hima Cement</td>
+                            <td>Apr 10, 2026</td>
+                            <td><span class="status-pill in-stock">In Stock</span></td>
+                            <td><a href="#" class="edit-link">Edit</a></td>
+                        </tr>
+                        <tr>
+                            <td>Iron Bars 12mm (6m)</td>
+                            <td>180 units</td>
+                            <td>25,000</td>
+                            <td>28,000</td>
+                            <td>Steel Rolling Mills</td>
+                            <td>Apr 12, 2026</td>
+                            <td><span class="status-pill in-stock">In Stock</span></td>
+                            <td><a href="#" class="edit-link">Edit</a></td>
+                        </tr>
+                        <tr>
+                            <td>Iron Bars 16mm (6m)</td>
+                            <td>120 units</td>
+                            <td>40,000</td>
+                            <td>45,000</td>
+                            <td>Steel Rolling Mills</td>
+                            <td>Apr 11, 2026</td>
+                            <td><span class="status-pill in-stock">In Stock</span></td>
+                            <td><a href="#" class="edit-link">Edit</a></td>
+                        </tr>
+                        <tr>
+                            <td>Nails 1kg</td>
+                            <td>300 units</td>
+                            <td>7,000</td>
+                            <td>8,000</td>
+                            <td>Roofings Ltd</td>
+                            <td>Apr 09, 2026</td>
+                            <td><span class="status-pill in-stock">In Stock</span></td>
+                            <td><a href="#" class="edit-link">Edit</a></td>
+                        </tr>
+                        <tr>
+                            <td>Wire Mesh (2m x 3m)</td>
+                            <td>80 units</td>
+                            <td>58,000</td>
+                            <td>65,000</td>
+                            <td>Wire Industries</td>
+                            <td>Apr 13, 2026</td>
+                            <td><span class="status-pill in-stock">In Stock</span></td>
+                            <td><a href="#" class="edit-link">Edit</a></td>
+                        </tr>
+                        <tr>
+                            <td>Barbed Wire (50m roll)</td>
+                            <td>45 units</td>
+                            <td>38,000</td>
+                            <td>42,000</td>
+                            <td>Wire Industries</td>
+                            <td>Apr 08, 2026</td>
+                            <td><span class="status-pill low-stock">Low Stock</span></td>
+                            <td><a href="#" class="edit-link">Edit</a></td>
+                        </tr>
+                        <tr>
+                            <td>Iron Sheets (3m)</td>
+                            <td>200 units</td>
+                            <td>34,000</td>
+                            <td>38,000</td>
+                            <td>Roofings Ltd</td>
+                            <td>Apr 14, 2026</td>
+                            <td><span class="status-pill in-stock">In Stock</span></td>
+                            <td><a href="#" class="edit-link">Edit</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #fcfcfc;
+    color: #333333;
+}
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 260px;
+    background: #ffffff;
+    border-right: 1px solid #eeeeee;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 0;
+    position: fixed;
+    height: 100vh;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    padding: 0 25px 35px;
+    gap: 15px;
+}
+
+.logo-icon {
+    background: #d32f2f;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-name { font-size: 20px; font-weight: 700; }
+.brand-sub { font-size: 11px; color: #888888; }
+
+.nav-menu { flex-grow: 1; }
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 14px 25px;
+    text-decoration: none;
+    color: #555555;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 5px 15px;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.nav-item.active { background: #d32f2f; color: #ffffff; }
+.nav-item:hover:not(.active) { background: #f8f9fa; }
+.nav-item .icon { margin-right: 15px; }
+
+.sidebar-footer { border-top: 1px solid #eeeeee; padding-top: 15px; margin-top: auto; }
+
+/* Main Area */
+.main-content { flex-grow: 1; padding: 35px; margin-left: 260px; }
+
+.header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 35px; }
+.date-text { color: #888888; font-size: 14px; }
+
+.header-right { display: flex; align-items: center; gap: 25px; }
+.user-profile { display: flex; align-items: center; gap: 12px; }
+.user-info { text-align: right; }
+.user-name { display: block; font-weight: 600; font-size: 15px; }
+.user-avatar { width: 42px; height: 42px; background: #d32f2f; color: #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; }
+
+/* Table Controls */
+.table-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.search-box {
+    position: relative;
+    width: 350px;
+}
+
+.search-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888888;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 12px 12px 12px 42px;
+    border: 1px solid #eeeeee;
+    border-radius: 8px;
+    background: #ffffff;
+    outline: none;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.search-box input:focus { border-color: #d32f2f; }
+
+.btn {
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.primary-btn {
+    background: #d32f2f;
+    color: #ffffff;
+    transition: 0.2s;
+}
+
+.primary-btn:hover { background: #b71c1c; }
+
+/* Inventory Table Card */
+.table-card {
+    background: #ffffff;
+    border-radius: 15px;
+    border: 1px solid #eeeeee;
+    overflow: hidden;
+}
+
+.table-container { overflow-x: auto; }
+
+table { width: 100%; border-collapse: collapse; }
+
+th {
+    text-align: left;
+    padding: 20px 15px;
+    border-bottom: 1px solid #eeeeee;
+    color: #888888;
+    font-size: 13px;
+    font-weight: 500;
+    background: #ffffff;
+}
+
+td {
+    padding: 20px 15px;
+    border-bottom: 1px solid #f9f9f9;
+    font-size: 14px;
+    color: #333333;
+}
+
+/* Status Pills */
+.status-pill {
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.in-stock {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.low-stock {
+    background: #fff1f0;
+    color: #d32f2f;
+}
+
+/* Actions */
+.edit-link {
+    color: #333333;
+    text-decoration: none;
+    font-weight: 500;
+    background: #f8f9fa;
+    padding: 6px 15px;
+    border-radius: 6px;
+    border: 1px solid #eeeeee;
+    transition: 0.2s;
+}
+
+.edit-link:hover {
+    background: #eeeeee;
+}

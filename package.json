@@ -1,0 +1,25 @@
+{
+  "name": "final",
+  "version": "1.0.0",
+  "description": "This is my Nyondo Project",
+  "keywords": [
+    "Nyondo",
+    "Hardware"
+  ],
+  "homepage": "https://github.com/Irene-M16/Final-Project#readme",
+  "bugs": {
+    "url": "https://github.com/Irene-M16/Final-Project/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Irene-M16/Final-Project.git"
+  },
+  "license": "ISC",
+  "author": "Munguromo Irene",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  }
+}

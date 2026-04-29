@@ -169,6 +169,7 @@ body {
     border: 1px solid var(--border-color);
 }
 
+
 .card-header {
     display: flex;
     justify-content: space-between;
@@ -242,8 +243,9 @@ body {
 }
 
 .action-btn:hover {
-    background: #fafafa;
+    background: var(--primary-red);
     transform: translateY(-2px);
+    color: var(--bg-light);
 }
 
 .primary-btn {
