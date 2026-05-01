@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nyondo Admin Portal - Dashboard</title>
     <link href="https://googleapis.com" rel="stylesheet">
+    <!-- Link to your css file -->
     <link rel="stylesheet" href="../admin.css/adminDash.css">
 </head>
 <body>
 
 <div class="page-wrapper">
-    <!-- Sidebar: Natural Scroll Column -->
+    <!-- Sidebar: Natural Scroll Column behavior -->
     <aside class="sidebar">
         <div class="sidebar-top">
             <div class="logo-section">
@@ -25,8 +26,8 @@
                 <a href="adminDash.html" class="nav-item active"><span class="icon">📊</span> Dashboard</a>
                 <a href="userReg.html" class="nav-item"><span class="icon">👥</span> Users</a>
                 <a href="supplier.html" class="nav-item"><span class="icon">💳</span> Supplier Credit</a>
-                <a href="#" class="nav-item"><span class="icon">🏦</span> Deposit Scheme</a>
-                <a href="transport-charges.html" class="nav-item"><span class="icon">🚛</span> Transport Charges</a>
+                <a href="depositScheme.html" class="nav-item"><span class="icon">🏦</span> Deposit Scheme</a>
+                <a href="transport.html" class="nav-item"><span class="icon">🚛</span> Transport Charges</a>
                 <a href="#" class="nav-item"><span class="icon">📋</span> Reports</a>
             </nav>
         </div>
@@ -40,51 +41,43 @@
 
     <!-- Main Content Area -->
     <main class="main-content">
+        <!-- THE ORGANIZED HEADER -->
         <header class="header">
             <div class="header-left">
                 <h2>Admin Dashboard</h2>
                 <p class="date-text">Wednesday, April 29, 2026</p>
             </div>
+
             <div class="header-right">
-                <div class="notification-bell">🔔</div>
+                <!-- 1. Notification Bell -->
+                <div class="bell-box">
+                    <span class="icon-bell">🔔</span>
+                    <span class="red-dot"></span>
+                </div>
+
+                <!-- 2. Vertical Divider Line -->
+                <div class="header-divider"></div>
+
+                <!-- 3. User Profile Area -->
                 <div class="user-profile">
-                    <div class="user-info">
+                    <div class="user-text">
                         <span class="user-name">David Musoke</span>
                         <span class="user-role">Administrator</span>
                     </div>
-                    <div class="user-avatar">👤</div>
+                    <div class="user-avatar-circle">👤</div>
                 </div>
             </div>
         </header>
 
-        <!-- Top KPI Grid -->
+        <!-- KPI Cards Grid -->
         <section class="kpi-grid">
-            <div class="card">
-                <div class="card-header"><span class="card-icon">👥</span></div>
-                <p class="card-label">Total Users</p>
-                <h3 class="card-value">4</h3>
-            </div>
-            <div class="card">
-                <div class="card-header">
-                    <span class="card-icon">💳</span> 
-                    <span class="badge-alert">1 Overdue</span>
-                </div>
-                <p class="card-label">Supplier Credit</p>
-                <h3 class="card-value">11M UGX</h3>
-            </div>
-            <div class="card">
-                <div class="card-header"><span class="card-icon">🏦</span></div>
-                <p class="card-label">Active Deposits</p>
-                <h3 class="card-value">4.2M UGX</h3>
-            </div>
-            <div class="card">
-                <div class="card-header"><span class="card-icon">💰</span></div>
-                <p class="card-label">Transport Revenue</p>
-                <h3 class="card-value">900K UGX</h3>
-            </div>
+            <div class="card"><p class="card-label">Total Users</p><h3 class="card-value">4</h3></div>
+            <div class="card"><p class="card-label">Supplier Credit</p><h3 class="card-value">11M UGX</h3></div>
+            <div class="card"><p class="card-label">Active Deposits</p><h3 class="card-value">4.2M UGX</h3></div>
+            <div class="card"><p class="card-label">Transport Revenue</p><h3 class="card-value">900K UGX</h3></div>
         </section>
 
-        <!-- Overdue Alert Banner -->
+        <!-- Overdue Alert -->
         <section class="alert-banner">
             <div class="alert-info">
                 <span class="alert-symbol">!</span>
@@ -102,57 +95,57 @@
             </div>
         </section>
 
-        <!-- Bottom Grid (Missing Sections Added Here) -->
+        <!-- Bottom Content Grid -->
         <section class="bottom-grid">
-            <!-- Recent Transport Charges -->
             <div class="content-card">
                 <h3 class="card-title">Recent Transport Charges</h3>
                 <div class="transport-list">
                     <div class="transport-item">
-                        <div class="t-info">
-                            <p class="t-date">Apr 14, 2026</p>
-                            <p class="t-meta">8 charged • 15 free</p>
-                        </div>
-                        <span class="t-price">240,000 UGX</span>
+                        <div><p style="font-weight:600;">Apr 14, 2026</p><p style="font-size:12px;color:#888;">8 charged • 15 free</p></div>
+                        <span style="color:#d32f2f; font-weight:700;">240,000 UGX</span>
                     </div>
+                </div>
+                 <div class="transport-list">
                     <div class="transport-item">
-                        <div class="t-info">
-                            <p class="t-date">Apr 13, 2026</p>
-                            <p class="t-meta">12 charged • 18 free</p>
-                        </div>
-                        <span class="t-price">360,000 UGX</span>
+                        <div><p style="font-weight:600;">Apr 14, 2026</p><p style="font-size:12px;color:#888;">8 charged • 15 free</p></div>
+                        <span style="color:#d32f2f; font-weight:700;">240,000 UGX</span>
                     </div>
+                </div>
+                 <div class="transport-list">
                     <div class="transport-item">
-                        <div class="t-info">
-                            <p class="t-date">Apr 12, 2026</p>
-                            <p class="t-meta">10 charged • 14 free</p>
-                        </div>
-                        <span class="t-price">300,000 UGX</span>
+                        <div><p style="font-weight:600;">Apr 14, 2026</p><p style="font-size:12px;color:#888;">8 charged • 15 free</p></div>
+                        <span style="color:#d32f2f; font-weight:700;">240,000 UGX</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Deposit Scheme Summary -->
-            <div class="content-card">
-                <h3 class="card-title">Deposit Scheme Summary</h3>
-                <div class="summary-table">
-                    <div class="summary-row">
-                        <span>Active Customers</span>
-                        <strong>4</strong>
-                    </div>
-                    <div class="summary-row">
-                        <span>Total Deposits</span>
-                        <strong class="highlight-red">4,200,000 UGX</strong>
-                    </div>
-                    <div class="summary-row">
-                        <span>Ready for Collection</span>
-                        <span class="pill-green">1 Customer</span>
-                    </div>
-                </div>
-                <div class="eligible-box">
-                    <p class="eligible-label">Eligible Products</p>
-                    <p class="product-list">Cement • Iron Sheets • Iron Bars</p>
-                </div>
+           <!-- Deposit Scheme Summary Card -->
+<div class="deposit-card">
+    <h3 class="deposit-title">Deposit Scheme Summary</h3>
+    
+    <!-- Gray Stats Box -->
+    <div class="stats-container">
+        <div class="stat-row">
+            <span class="stat-label">Active Customers</span>
+            <span class="stat-value">4</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">Total Deposits</span>
+            <span class="stat-value red-text">4,200,000 UGX</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">Ready for Collection</span>
+            <span class="collection-badge">1 Customer</span>
+        </div>
+    </div>
+
+    <!-- Green Products Box -->
+    <div class="eligible-products-box">
+        <h4 class="eligible-title">Eligible Products</h4>
+        <p class="product-names">Cement • Iron Sheets • Iron Bars</p>
+    </div>
+</div>
+
             </div>
         </section>
     </main>

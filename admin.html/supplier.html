@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nyondo Admin - Supplier Credit Tracking</title>
+    <title>Nyondo Admin - Supplier Credit</title>
     <link href="https://googleapis.com" rel="stylesheet">
-    <!-- This link looks for supplier.css in the same folder -->
     <link rel="stylesheet" href="../admin.css/supplier.css">
 </head>
 <body>
 
 <div class="page-wrapper">
-    <!-- Sidebar: Natural Scroll Layout -->
+    <!-- Sidebar: Natural Scroll Column -->
     <aside class="sidebar">
         <div class="sidebar-top">
             <div class="logo-section">
@@ -26,8 +25,9 @@
                 <a href="adminDash.html" class="nav-item"><span class="icon">📊</span> Dashboard</a>
                 <a href="userReg.html" class="nav-item"><span class="icon">👥</span> Users</a>
                 <a href="supplier.html" class="nav-item active"><span class="icon">💳</span> Supplier Credit</a>
-                <a href="deposits.html" class="nav-item"><span class="icon">🏦</span> Deposit Scheme</a>
-                <a href="reports.html" class="nav-item"><span class="icon">📋</span> Reports</a>
+                <a href="depositScheme.html" class="nav-item"><span class="icon">🏦</span> Deposit Scheme</a>
+                <a href="transport.html" class="nav-item"><span class="icon">🚛</span> Transport Charges</a>
+                <a href="#" class="nav-item"><span class="icon">📋</span> Reports</a>
             </nav>
         </div>
 
@@ -40,18 +40,25 @@
 
     <!-- Main Content Area -->
     <main class="main-content">
+        <!-- ORGANIZED HEADER -->
         <header class="header">
             <div class="header-left">
                 <h2>Supplier Credit Tracking</h2>
                 <p class="date-text">Wednesday, April 29, 2026</p>
             </div>
+
             <div class="header-right">
+                <div class="bell-box">
+                    <span class="icon-bell">🔔</span>
+                    <span class="red-dot"></span>
+                </div>
+                <div class="header-divider"></div>
                 <div class="user-profile">
-                    <div class="user-info">
+                    <div class="user-text">
                         <span class="user-name">David Musoke</span>
                         <span class="user-role">Administrator</span>
                     </div>
-                    <div class="user-avatar">👤</div>
+                    <div class="user-avatar-circle">👤</div>
                 </div>
             </div>
         </header>
@@ -76,7 +83,6 @@
                             <th>Amount Paid</th>
                             <th>Balance</th>
                             <th>Due Date</th>
-                            <th>Last Payment</th>
                             <th>Status</th>
                             <th>Actions</th>
                         </tr>
@@ -84,42 +90,20 @@
                     <tbody>
                         <tr>
                             <td>Hima Cement</td>
-                            <td><strong>15,000,000 UGX</strong></td>
-                            <td>10,000,000 UGX</td>
-                            <td class="red-text">5,000,000 UGX</td>
+                            <td><strong>15,000,000</strong></td>
+                            <td>10,000,000</td>
+                            <td class="red-text">5,000,000</td>
                             <td>Apr 30, 2026</td>
-                            <td>Apr 10, 2026</td>
-                            <td><span class="status-pill pending-pill">Pending</span></td>
-                            <td><a href="#" class="record-pay-btn">Record Payment</a></td>
-                        </tr>
-                        <tr>
-                            <td>Steel Rolling Mills</td>
-                            <td><strong>8,500,000 UGX</strong></td>
-                            <td>8,500,000 UGX</td>
-                            <td>0 UGX</td>
-                            <td>Apr 15, 2026</td>
-                            <td>Apr 12, 2026</td>
-                            <td><span class="status-pill paid-pill">Paid</span></td>
-                            <td><a href="#" class="record-pay-btn">Record Payment</a></td>
-                        </tr>
-                        <tr>
-                            <td>Roofings Ltd</td>
-                            <td><strong>6,200,000 UGX</strong></td>
-                            <td>3,000,000 UGX</td>
-                            <td class="red-text">3,200,000 UGX</td>
-                            <td>Apr 20, 2026</td>
-                            <td>Apr 08, 2026</td>
-                            <td><span class="status-pill pending-pill">Pending</span></td>
+                            <td><span class="status-pill pending">Pending</span></td>
                             <td><a href="#" class="record-pay-btn">Record Payment</a></td>
                         </tr>
                         <tr>
                             <td>Wire Industries</td>
-                            <td><strong>4,800,000 UGX</strong></td>
-                            <td>2,000,000 UGX</td>
-                            <td class="red-text">2,800,000 UGX</td>
+                            <td><strong>4,800,000</strong></td>
+                            <td>2,000,000</td>
+                            <td class="red-text">2,800,000</td>
                             <td>Apr 10, 2026</td>
-                            <td>Apr 05, 2026</td>
-                            <td><span class="status-pill overdue-pill">Overdue</span></td>
+                            <td><span class="status-pill overdue">Overdue</span></td>
                             <td><a href="#" class="record-pay-btn">Record Payment</a></td>
                         </tr>
                     </tbody>

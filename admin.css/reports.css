@@ -1,0 +1,302 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #fcfcfc;
+    color: #333333;
+}
+
+.page-wrapper {
+    display: flex;
+    align-items: stretch;
+    min-height: 100vh;
+}
+
+/* --- 2. SIDEBAR (Natural Scroll Layout) --- */
+.sidebar {
+    width: 260px;
+    background: #ffffff;
+    border-right: 1px solid #eeeeee;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px 0;
+    flex-shrink: 0;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    padding: 0 25px 35px;
+    gap: 15px;
+}
+
+.logo-icon {
+    background: #d32f2f;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.brand-name {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.brand-sub {
+    font-size: 11px;
+    color: #888888;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 14px 25px;
+    text-decoration: none;
+    color: #333333;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 5px 15px;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.nav-item.active {
+    background: #d32f2f;
+    color: #ffffff;
+}
+
+.nav-item:hover:not(.active) {
+    background: #f8f9fa;
+}
+
+.nav-item .icon {
+    margin-right: 15px;
+}
+
+.logout-link {
+    font-weight: 600;
+    margin-top: 20px;
+    color: #333333 !important;
+}
+
+/* --- 3. MAIN CONTENT & ORGANIZED HEADER --- */
+.main-content {
+    flex-grow: 1;
+    padding: 35px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 20px;
+}
+
+.header-left h2 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.date-text {
+    color: #888888;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Header Right Alignment */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.bell-box {
+    position: relative;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.red-dot {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 9px;
+    height: 9px;
+    background-color: #d32f2f;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+}
+
+.header-divider {
+    width: 1px;
+    height: 35px;
+    background-color: #eeeeee;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-text {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.user-name {
+    font-weight: 700;
+    font-size: 15px;
+    color: #333333;
+}
+
+.user-role {
+    font-size: 12px;
+    color: #888888;
+    margin-top: 2px;
+}
+
+.user-avatar-circle {
+    width: 40px;
+    height: 40px;
+    background-color: #d32f2f;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+/* --- 4. TAB SWITCHER STYLING --- */
+.tabs-nav {
+    background: #f1f1f1;
+    display: inline-flex;
+    padding: 6px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.tab-btn {
+    padding: 10px 25px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    color: #666666;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.tab-btn.active {
+    background: #ffffff;
+    color: #333333;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Hide/Show Logic */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* --- 5. REPORT CARD & FORMS --- */
+.report-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid #eeeeee;
+}
+
+.report-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #333333;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 35px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #444444;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-group select, 
+.form-group input {
+    padding: 12px 15px;
+    border: 1px solid #eeeeee;
+    border-radius: 8px;
+    background: #fafafa;
+    font-size: 14px;
+    outline: none;
+    color: #333333;
+    transition: 0.2s;
+}
+
+.form-group select:focus, 
+.form-group input:focus {
+    border-color: #d32f2f;
+    background: #ffffff;
+}
+
+/* --- 6. ACTION BUTTON --- */
+.generate-btn {
+    width: 100%;
+    background: #d32f2f;
+    color: #ffffff;
+    border: none;
+    padding: 16px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: 0.2s;
+}
+
+.generate-btn:hover {
+    background: #b71c1c;
+    transform: translateY(-1px);
+}

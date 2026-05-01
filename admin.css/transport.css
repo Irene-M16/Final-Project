@@ -1,0 +1,56 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+body { background-color: #fcfcfc; color: #333333; }
+
+.page-wrapper { display: flex; align-items: stretch; min-height: 100vh; }
+
+/* Sidebar Logic (Standardized) */
+.sidebar { width: 260px; background: #ffffff; border-right: 1px solid #eeeeee; display: flex; flex-direction: column; justify-content: space-between; padding: 25px 0; flex-shrink: 0; }
+.logo-section { display: flex; align-items: center; padding: 0 25px 35px; gap: 15px; }
+.logo-icon { background: #d32f2f; color: #ffffff; padding: 10px; border-radius: 10px; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; font-size: 22px; }
+.brand-name { font-size: 20px; font-weight: 700; }
+.nav-item { display: flex; align-items: center; padding: 14px 25px; text-decoration: none; color: #333333; font-size: 15px; font-weight: 500; margin: 5px 15px; border-radius: 10px; }
+.nav-item.active { background: #d32f2f; color: #ffffff; }
+.nav-item:hover:not(.active) { background: #f8f9fa; }
+.nav-item .icon { margin-right: 15px; }
+.logout-link { font-weight: 600; margin-top: 20px; color: #333333 !important; }
+
+/* Header & Main Area */
+.main-content { flex-grow: 1; padding: 35px; }
+.header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 35px; border-bottom: 1px solid #f0f0f0; padding-bottom: 20px; }
+.header-right { display: flex; align-items: center; gap: 25px; }
+.bell-box { position: relative; font-size: 22px; }
+.red-dot { position: absolute; top: 0; right: 0; width: 9px; height: 9px; background-color: #d32f2f; border-radius: 50%; border: 2px solid #ffffff; }
+.header-divider { width: 1px; height: 35px; background-color: #eeeeee; }
+.user-profile { display: flex; align-items: center; gap: 15px; }
+.user-text { display: flex; flex-direction: column; text-align: right; }
+.user-name { font-weight: 700; font-size: 15px; }
+.user-role { font-size: 12px; color: #888888; }
+.user-avatar-circle { width: 40px; height: 40px; background-color: #d32f2f; color: #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+
+/* Policy Card (Light Theme Conversion) */
+.policy-card { background: #ffffff; padding: 30px; border-radius: 15px; border: 1px solid #eeeeee; margin-bottom: 30px; }
+.policy-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+.policy-icon { font-size: 20px; }
+.policy-header h4 { font-size: 14px; font-weight: 700; color: #d32f2f; letter-spacing: 0.5px; }
+.policy-item { display: flex; align-items: center; margin-bottom: 12px; font-size: 15px; color: #555; }
+.bullet { margin-right: 15px; font-size: 14px; }
+.bullet.red { color: #d32f2f; }
+.bullet.green { color: #2e7d32; }
+
+/* Dashboard Grid */
+.transport-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 25px; }
+.content-card { background: #ffffff; padding: 30px; border-radius: 15px; border: 1px solid #eeeeee; }
+.card-title { font-size: 15px; font-weight: 700; margin-bottom: 25px; color: #333; letter-spacing: 0.5px; }
+
+/* Revenue List Styling */
+.revenue-list { background: #f8f9fa; border-radius: 12px; overflow: hidden; }
+.rev-row { display: flex; justify-content: space-between; padding: 15px 20px; border-bottom: 1px solid #eeeeee; font-size: 14px; }
+.rev-row span { color: #666; }
+.rev-total { display: flex; justify-content: space-between; padding: 20px; background: #d32f2f; color: #ffffff; font-weight: 700; font-size: 16px; }
+
+/* Chart Styling */
+.chart-container { height: 300px; display: flex; align-items: flex-end; padding-top: 20px; }
+.chart-bars { flex-grow: 1; display: flex; align-items: flex-end; justify-content: space-around; border-bottom: 1px solid #eeeeee; height: 100%; }
+.bar-wrapper { display: flex; flex-direction: column; align-items: center; width: 10%; }
+.bar { width: 100%; background: #d32f2f; border-radius: 4px 4px 0 0; transition: 0.3s; }
+.bar-wrapper span { margin-top: 15px; font-size: 11px; color: #888; font-weight: 500; }
