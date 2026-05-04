@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyondo Sales Portal - Check Stock</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="../css/stockLevel.css">
+</head>
+<body>
+
+<div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo-section">
+            <div class="logo-icon">🏢</div>
+            <div>
+                <h1 class="brand-name">NYONDO</h1>
+                <p class="brand-sub">Sales Portal</p>
+            </div>
+        </div>
+
+        <nav class="nav-menu">
+            <a href="sales-dash.html" class="nav-item">
+                <span class="icon">📊</span> Dashboard
+            </a>
+            <a href="record.html" class="nav-item">
+                <span class="icon">🛒</span> Record Sale
+            </a>
+            <a href="stockLevel.html" class="nav-item active">
+                <span class="icon">📦</span> Check Stock
+            </a>
+            <a href="receipts.html" class="nav-item">
+                <span class="icon">📑</span> Receipts
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="#" class="nav-item">
+                <span class="icon">↪️</span> Logout
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="header">
+            <div class="header-left">
+                <h2>Check Stock</h2>
+                <p class="date-text">Tuesday, April 28, 2026</p>
+            </div>
+            <div class="header-right">
+                <div class="notification-bell">🔔</div>
+                <div class="user-profile">
+                    <div class="user-info">
+                        <span class="user-name">Jane Namubiru</span>
+                        <span class="user-role">Sales Attendant</span>
+                    </div>
+                    <div class="user-avatar">👤</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Stock Table Section -->
+        <section class="table-section">
+            <div class="table-header-row">
+                <h3 class="section-title">Current Stock Levels</h3>
+                <div class="search-container">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Search products..." class="search-input">
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product Name</th>
+                            <th>Unit Price (UGX)</th>
+                            <th>Stock Quantity</th>
+                            <th>Stock Value (UGX)</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cement (50kg bag)</td>
+                            <td>35,000</td>
+                            <td>450 units</td>
+                            <td>15,750,000</td>
+                            <td><span class="status-pill success">In Stock</span></td>
+                        </tr>
+                        <tr>
+                            <td>Iron Bars 12mm (6m)</td>
+                            <td>28,000</td>
+                            <td>180 units</td>
+                            <td>5,040,000</td>
+                            <td><span class="status-pill success">In Stock</span></td>
+                        </tr>
+                        <tr>
+                            <td>Iron Bars 16mm (6m)</td>
+                            <td>45,000</td>
+                            <td>120 units</td>
+                            <td>5,400,000</td>
+                            <td><span class="status-pill success">In Stock</span></td>
+                        </tr>
+                        <tr>
+                            <td>Nails 1kg</td>
+                            <td>8,000</td>
+                            <td>300 units</td>
+                            <td>2,400,000</td>
+                            <td><span class="status-pill success">In Stock</span></td>
+                        </tr>
+                        <tr>
+                            <td>Wire Mesh (2m x 3m)</td>
+                            <td>65,000</td>
+                            <td>80 units</td>
+                            <td>5,200,000</td>
+                            <td><span class="status-pill warning">Medium</span></td>
+                        </tr>
+                        <tr>
+                            <td>Barbed Wire (50m roll)</td>
+                            <td>42,000</td>
+                            <td>95 units</td>
+                            <td>3,990,000</td>
+                            <td><span class="status-pill warning">Medium</span></td>
+                        </tr>
+                        <tr>
+                            <td>Iron Sheets (3m)</td>
+                            <td>38,000</td>
+                            <td>200 units</td>
+                            <td>7,600,000</td>
+                            <td><span class="status-pill success">In Stock</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+</div>
+
+</body>
+</html>

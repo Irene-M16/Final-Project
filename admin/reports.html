@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports & Analytics</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reports.css">
+</head>
+<body>
+
+<div class="page-wrapper">
+    <!-- Sidebar (Same as other pages) -->
+    <aside class="sidebar">
+        <div class="sidebar-top">
+            <div class="logo-section">
+                <div class="logo-icon">🏢</div>
+                <div><h1 class="brand-name">NYONDO</h1><p class="brand-sub">Admin Portal</p></div>
+            </div>
+            <nav class="nav-menu">
+                <a href="adminDash" class="nav-item"><span class="icon">📊</span> Dashboard</a>
+                <a href="userReg" class="nav-item"><span class="icon">👥</span> Users</a>
+                <a href="supplier" class="nav-item"><span class="icon">💳</span> Supplier Credit</a>
+                <a href="depositScheme" class="nav-item"><span class="icon">🏦</span> Deposit Scheme</a>
+                 <a href="transport" class="nav-item"><span class="icon">🚛</span> Transport Charges</a>
+                <a href="reports" class="nav-item active"><span class="icon">📋</span> Reports</a>
+            </nav>
+        </div>
+        <div class="sidebar-bottom">
+            <a href="login.html" class="nav-item logout-link"><span class="icon">↪️</span> Logout</a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="header">
+            <div class="header-left">
+                <h2>Reports & Analytics</h2>
+                <p class="date-text">Friday, May 1, 2026</p>
+            </div>
+            <div class="header-right">
+                <div class="bell-box"><span class="icon-bell">🔔</span><span class="red-dot"></span></div>
+                <div class="header-divider"></div>
+                <div class="user-profile">
+                    <div class="user-text"><span class="user-name">David Musoke</span><span class="user-role">Administrator</span></div>
+                    <div class="user-avatar-circle">👤</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Tab Switcher -->
+        <div class="tabs-nav">
+            <button class="tab-btn active" onclick="openTab(event, 'sales-tab')">Sales Reports</button>
+            <button class="tab-btn" onclick="openTab(event, 'supplier-tab')">Supplier Credit Reports</button>
+            <button class="tab-btn" onclick="openTab(event, 'deposit-tab')">Deposit Reports</button>
+        </div>
+
+        <!-- 1. SALES REPORT SECTION -->
+        <section id="sales-tab" class="tab-content active">
+            <div class="report-card">
+                <h3 class="report-title">Generate Sales Report</h3>
+                <form class="report-form">
+                    <div class="form-grid">
+                        <div class="form-group"><label>Report Type</label><select><option>General Sales</option></select></div>
+                        <div class="form-group"><label>Format</label><select><option>PDF Document</option><option>Excel Sheet</option></select></div>
+                        <div class="form-group"><label>Start Date</label><input type="date"></div>
+                        <div class="form-group"><label>End Date</label><input type="date"></div>
+                    </div>
+                    <button type="submit" class="generate-btn">📥 Generate Sales Report</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- 2. SUPPLIER REPORT SECTION -->
+        <section id="supplier-tab" class="tab-content">
+            <div class="report-card">
+                <h3 class="report-title">Supplier Credit Report</h3>
+                <form class="report-form">
+                    <div class="form-grid">
+                        <div class="form-group"><label>Supplier</label><select><option>All Suppliers</option></select></div>
+                        <div class="form-group"><label>Status Filter</label><select><option>All Statuses</option><option>Pending</option><option>Overdue</option></select></div>
+                    </div>
+                    <button type="submit" class="generate-btn">📥 Generate Credit Report</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- 3. DEPOSIT REPORT SECTION -->
+        <section id="deposit-tab" class="tab-content">
+            <div class="report-card">
+                <h3 class="report-title">Deposit Scheme Report</h3>
+                <form class="report-form">
+                    <div class="form-grid">
+                        <div class="form-group"><label>Product Filter</label><select><option>All Products</option></select></div>
+                        <div class="form-group"><label>Status</label><select><option>All Statuses</option><option>Ready</option></select></div>
+                    </div>
+                    <button type="submit" class="generate-btn">📥 Generate Deposit Report</button>
+                </form>
+            </div>
+        </section>
+    </main>
+</div>
+
+<!--to switch the tabs -->
+<script>
+    function openTab(evt, tabName) {
+        // Hide all content sections
+        var contents = document.getElementsByClassName("tab-content");
+        for (var i = 0; i < contents.length; i++) {
+            contents[i].classList.remove("active");
+        }
+
+        // Remove "active" color from all buttons
+        var buttons = document.getElementsByClassName("tab-btn");
+        for (var i = 0; i < buttons.length; i++) {
+            buttons[i].classList.remove("active");
+        }
+
+        // Show the clicked section and highlight the button
+        document.getElementById(tabName).classList.add("active");
+        evt.currentTarget.classList.add("active");
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Receipts</title>
+    <link rel="stylesheet" href="../css/receipts.css">
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+<body>
+
+<div class="dashboard-container">
+    <aside class="sidebar">
+        <div class="logo-section">
+            <div class="logo-icon">🏢</div>
+            <div>
+                <h1 class="brand-name">NYONDO</h1>
+                <p class="brand-sub">Sales Portal</p>
+            </div>
+        </div>
+
+        <nav class="nav-menu">
+            <a href="sales-dash.html" class="nav-item"><span class="icon">📊</span> Dashboard</a>
+            <a href="record.html" class="nav-item"><span class="icon">🛒</span> Record Sale</a>
+            <a href="stockLevel.html" class="nav-item"><span class="icon">📦</span> Check Stock</a>
+            <a href="receipts.html" class="nav-item active"><span class="icon">📑</span> Receipts</a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="../html/index.html" class="nav-item"><span class="icon">↪️</span> Logout</a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="header">
+            <div class="header-left">
+                <h2>Sales Receipts</h2>
+                <p class="date-text">Tuesday, April 28, 2026</p>
+            </div>
+            <div class="header-right">
+                <div class="notification-bell">🔔</div>
+                <div class="user-profile">
+                    <div class="user-info">
+                        <span class="user-name">Jane Namubiru</span>
+                        <span class="user-role">Sales Attendant</span>
+                    </div>
+                    <div class="user-avatar">👤</div>
+                </div>
+            </div>
+        </header>
+
+        <section class="table-section">
+            <div class="table-controls">
+                <div class="search-container">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Search receipts by invoice ID or customer..." class="search-input">
+                </div>
+                <a href="receit.html" class="primary-btn">📑 Print Receipt</a>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Invoice ID</th>
+                            <th>Customer</th>
+                            <th>Items</th>
+                            <th>Amount (UGX)</th>
+                            <th>Transport</th>
+                            <th>Date & Time</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>INV-2026-0845</strong></td>
+                            <td>Mukasa Construction Ltd</td>
+                            <td class="items-cell">Cement x20, Iron Bars 12mm x15</td>
+                            <td>1,120,000</td>
+                            <td><span class="free-badge">Free</span></td>
+                            <td>Apr 14, 10:45 AM</td>
+                            <td><a href="#" class="view-link">View</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>INV-2026-0844</strong></td>
+                            <td>Nakato Builders</td>
+                            <td class="items-cell">Iron Sheets x25</td>
+                            <td>950,000</td>
+                            <td><span class="free-badge">Free</span></td>
+                            <td>Apr 14, 10:12 AM</td>
+                            <td><a href="#" class="view-link">View</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyondo - Register Deposit Customer</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="../css/formDeposit.css">
+</head>
+<body>
+
+    <section class="form-container">
+        <div class="form-header">
+            <h3>New Deposit Scheme Registration</h3>
+            <p>Register a customer to start paying in installments for specific products.</p>
+        </div>
+
+        <form class="nyondo-deposit-form">
+            <!-- Customer Name -->
+            <div class="form-row">
+                <label>Customer Full Name <em>(As per National ID)</em></label>
+                <div class="input-wrapper">
+                    <input type="text" placeholder="Enter full name" required>
+                </div>
+            </div>
+
+            <!-- NIN Number -->
+            <div class="form-row">
+                <label>NIN Number <em>(Identification)</em></label>
+                <div class="input-wrapper">
+                    <input type="text" placeholder="CM0000000XXXXX" maxlength="14" required>
+                </div>
+            </div>
+
+            <!-- Phone Number -->
+            <div class="form-row">
+                <label>Phone Number <em>(Contact)</em></label>
+                <div class="input-wrapper">
+                    <input type="tel" placeholder="+256 000 000 000" required>
+                </div>
+            </div>
+
+            <!-- Employer -->
+            <div class="form-row">
+                <label>Employer / Business Name</label>
+                <div class="input-wrapper">
+                    <input type="text" placeholder="Place of work or business" required>
+                </div>
+            </div>
+
+            <!-- Product Selection -->
+            <div class="form-row">
+                <label>Selected Product</label>
+                <div class="input-wrapper">
+                    <select required>
+                        <option value="">Choose product</option>
+                        <option>Cement (Bamburi)</option>
+                        <option>Iron Sheets (Pre-painted)</option>
+                        <option>Iron Bars (12mm)</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Total Amount -->
+            <div class="form-row">
+                <label>Total Goal Amount (UGX) <em>(Full price)</em></label>
+                <div class="input-wrapper">
+                    <input type="number" placeholder="e.g. 1,500,000" required>
+                </div>
+            </div>
+
+            <!-- Initial Deposit -->
+            <div class="form-row">
+                <label>Initial Deposit (UGX) <em>(Amount paid now)</em></label>
+                <div class="input-wrapper">
+                    <input type="number" placeholder="0.00" required>
+                </div>
+            </div>
+
+            <!-- Balance -->
+            <div class="form-row">
+                <label>Remaining Balance (UGX)</label>
+                <div class="input-wrapper">
+                    <input type="number" class="balance-input" placeholder="Total minus Deposit" required>
+                </div>
+            </div>
+
+            <!-- Due Date -->
+            <div class="form-row">
+                <label>Completion Due Date <em>(Final payment deadline)</em></label>
+                <div class="input-wrapper">
+                    <input type="date" class="date-highlight" required>
+                </div>
+            </div>
+
+            <!-- Form Actions -->
+            <div class="form-footer">
+                <button type="submit" class="btn-submit">Register Customer</button>
+                <button type="reset" class="btn-clear">Clear Form</button>
+            </div>
+        </form>
+    </section>
+
+</body>
+</html>

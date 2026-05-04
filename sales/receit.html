@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receit Form</title>
+    <link rel="stylesheet" href="../css/receit.css">
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+<body>
+
+    <div class="print-actions no-print">
+        <button onclick="window.print()" class="print-btn">🖨️ Print Receipt</button>
+        <a href="sales-dash.html" class="back-link">← Back to Sales</a>
+    </div>
+
+    <!-- The actual receipt document -->
+    <div class="receipt-container">
+        <header class="receipt-header">
+            <div class="company-info">
+                <div class="logo-box">🏢</div>
+                <div>
+                    <h1>NYONDO HARDWARE</h1>
+                    <p>Building Materials & Construction</p>
+                </div>
+            </div>
+            <div class="invoice-meta">
+                <p><strong>Receipt #:</strong> <span id="receipt-no">INV-2026-0845</span></p>
+                <p><strong>Date:</strong> <span id="receipt-date">April 20, 2026</span></p>
+            </div>
+        </header>
+
+        <section class="billing-section">
+            <div class="bill-to">
+                <p class="label">Billed To:</p>
+                <p class="customer-name" id="cust-name">Mukasa Construction Ltd</p>
+                <p id="cust-phone">+256 700 000 000</p>
+                <p id="cust-loc">Kira Road, Kampala</p>
+            </div>
+            <div class="payment-status">
+                <p class="label">Status:</p>
+                <span class="status-badge">PAID IN FULL</span>
+            </div>
+        </section>
+
+        <table class="items-table">
+            <thead>
+                <tr>
+                    <th>Item Description</th>
+                    <th class="qty">Qty</th>
+                    <th class="price">Unit Price</th>
+                    <th class="total">Total</th>
+                </tr>
+            </thead>
+            <tbody id="receipt-items">
+                <tr>
+                    <td>Cement (Bamburi - 50kg)</td>
+                    <td class="qty">20</td>
+                    <td class="price">35,000</td>
+                    <td class="total">700,000</td>
+                </tr>
+                <tr>
+                    <td>Iron Bars (12mm)</td>
+                    <td class="qty">15</td>
+                    <td class="price">28,000</td>
+                    <td class="total">420,000</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="summary-section">
+            <div class="summary-row">
+                <span>Subtotal (UGX):</span>
+                <span>1,120,000</span>
+            </div>
+            <div class="summary-row">
+                <span>Transport:</span>
+                <span class="free">FREE</span>
+            </div>
+            <div class="summary-row grand-total">
+                <span>TOTAL AMOUNT:</span>
+                <span>1,120,000 UGX</span>
+            </div>
+        </div>
+
+        <footer class="receipt-footer">
+            <p>Thank you for your business!</p>
+            <p class="terms">Terms: Goods once sold are not returnable.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
