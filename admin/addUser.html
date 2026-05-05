@@ -15,12 +15,12 @@
             <p>Create a brand new user and add them to this site.</p>
         </div>
 
-        <form class="nyondo-user-form">
+        <form action="/addUser" method="post" class="nyondo-user-form">
             <!-- Username -->
             <div class="form-row">
                 <label>Username <em>(required)</em></label>
                 <div class="input-wrapper">
-                    <input type="text" required>
+                    <input type="text" name="username" required>
                 </div>
             </div>
 
@@ -28,7 +28,7 @@
             <div class="form-row">
                 <label>Email <em>(required)</em></label>
                 <div class="input-wrapper">
-                    <input type="email" required>
+                    <input type="email" name="email" required>
                 </div>
             </div>
 
@@ -36,7 +36,7 @@
             <div class="form-row">
                 <label>First Name</label>
                 <div class="input-wrapper">
-                    <input type="text" required>
+                    <input type="text" name="fname" required>
                 </div>
             </div>
 
@@ -44,7 +44,7 @@
             <div class="form-row">
                 <label>Last Name</label>
                 <div class="input-wrapper">
-                    <input type="text" required>
+                    <input type="text" name="lname" required>
                 </div>
             </div>
 
@@ -52,7 +52,7 @@
             <div class="form-row">
                 <label>Website</label>
                 <div class="input-wrapper">
-                    <input type="url">
+                    <input type="url" name="website">
                 </div>
             </div>
 
@@ -69,7 +69,7 @@
                 <label>Send User Notification</label>
                 <div class="input-wrapper">
                     <div class="checkbox-group">
-                        <input type="checkbox" id="notify" checked>
+                        <input type="checkbox" name="notification" id="notify" checked>
                         <label for="notify" class="inline-label">Send the new user an email about their account.</label>
                     </div>
                 </div>
@@ -79,7 +79,7 @@
             <div class="form-row">
                 <label>Role</label>
                 <div class="input-wrapper">
-                    <select>
+                    <select name="role">
                         <option disabled>Select Role</option>
                         <option>Sales Attendant</option>
                         <option>Store Manager</option>

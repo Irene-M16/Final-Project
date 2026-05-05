@@ -35,6 +35,7 @@ app.use(expressSession({
 
 }))
 
+//very important
 app.use(express.static(path.join(__dirname, 'public')));
 
 
@@ -72,9 +73,9 @@ app.post('/sign', (req, res) =>{
     res.send('Put in the given details by the admin');
 })
 
-app.post('/forgot', (req, res) =>{
-    res.send('Forgot password');
-})
+// app.post('/forgot', (req, res) =>{
+//     res.send('Forgot password');
+// })
 
 app.put('/life', (req, res) =>{
     res.send('Life is not bread and drink');
@@ -101,7 +102,7 @@ app.get('/dog', (req, res) =>{
 
 
 //Serving html file
-//entering
+//landing
 app.get('/', (req, res) =>{
     res.sendFile(__dirname + "/html/index.html");
 })
@@ -110,12 +111,24 @@ app.get('/login', (req, res) =>{
     res.sendFile(__dirname + '/html/login.html');
 })
 
+app.post('/login', (req, res) =>{
+   console.log(req.body)
+})
+
 app.get('/signup', (req, res) =>{
     res.sendFile(__dirname + '/html/signup.html');
 })
 
+app.post('/signup', (req, res) =>{
+    console.log(req.body)
+})
+
 app.get('/forgot', (req, res) =>{
     res.sendFile(__dirname + '/html/forgotPassword.html');
+})
+
+app.post('/forgot', (req, res) =>{
+    console.log(req.body);
 })
 
 //sales
@@ -129,6 +142,10 @@ app.get('/stock', (req, res) =>{
 
 app.get('/record', (req, res) =>{
     res.sendFile(__dirname + '/sales/record.html');
+})
+
+app.post('/record', (req, res) =>{
+    console.log(req.body)
 })
 
 app.get('/receit', (req, res) =>{
@@ -146,6 +163,10 @@ app.get('/storeDash', (req, res) =>{
 
 app.get('/stockreg', (req, res) =>{
     res.sendFile(__dirname + '/store/stockreg.html');
+})
+
+app.post('/stockreg', (req, res) =>{
+    console.log(req.body)
 })
 
 app.get('/price', (req, res) =>{
@@ -186,15 +207,25 @@ app.get('/creditForm', (req, res) =>{
     res.sendFile(__dirname + '/admin/creditForm.html');
 })
 
+app.post('/creditForm', (req, res) =>{
+    console.log(req.body)
+})
+
 app.get('/addUser', (req, res) =>{
     res.sendFile(__dirname + '/admin/addUser.html');
+})
+
+app.post('/addUser', (req, res) =>{
+    console.log(req.body)
 })
 
 app.get('/formDeposit', (req, res) =>{
     res.sendFile(__dirname + '/admin/formDeposit.html');
 })
 
-
+app.post('/formDeposit', (req, res) =>{
+    console.log(req.body)
+})
 
 
 

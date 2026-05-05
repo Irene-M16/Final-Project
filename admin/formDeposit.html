@@ -15,12 +15,12 @@
             <p>Register a customer to start paying in installments for specific products.</p>
         </div>
 
-        <form class="nyondo-deposit-form">
+        <form action="/formDeposit" method="post" class="nyondo-deposit-form">
             <!-- Customer Name -->
             <div class="form-row">
                 <label>Customer Full Name <em>(As per National ID)</em></label>
                 <div class="input-wrapper">
-                    <input type="text" placeholder="Enter full name" required>
+                    <input type="text" name="fullname" placeholder="Enter full name" required>
                 </div>
             </div>
 
@@ -28,7 +28,7 @@
             <div class="form-row">
                 <label>NIN Number <em>(Identification)</em></label>
                 <div class="input-wrapper">
-                    <input type="text" placeholder="CM0000000XXXXX" maxlength="14" required>
+                    <input type="text" name="number" placeholder="CM0000000XXXXX" maxlength="14" required>
                 </div>
             </div>
 
@@ -36,7 +36,7 @@
             <div class="form-row">
                 <label>Phone Number <em>(Contact)</em></label>
                 <div class="input-wrapper">
-                    <input type="tel" placeholder="+256 000 000 000" required>
+                    <input type="tel" name="phone" placeholder="+256 000 000 000" required>
                 </div>
             </div>
 
@@ -44,7 +44,7 @@
             <div class="form-row">
                 <label>Employer / Business Name</label>
                 <div class="input-wrapper">
-                    <input type="text" placeholder="Place of work or business" required>
+                    <input type="text" name="employer" placeholder="Place of work or business" required>
                 </div>
             </div>
 
@@ -52,7 +52,7 @@
             <div class="form-row">
                 <label>Selected Product</label>
                 <div class="input-wrapper">
-                    <select required>
+                    <select name="product" required>
                         <option value="">Choose product</option>
                         <option>Cement (Bamburi)</option>
                         <option>Iron Sheets (Pre-painted)</option>
@@ -65,7 +65,7 @@
             <div class="form-row">
                 <label>Total Goal Amount (UGX) <em>(Full price)</em></label>
                 <div class="input-wrapper">
-                    <input type="number" placeholder="e.g. 1,500,000" required>
+                    <input type="number" name="tamount" placeholder="e.g. 1,500,000" required>
                 </div>
             </div>
 
@@ -73,7 +73,7 @@
             <div class="form-row">
                 <label>Initial Deposit (UGX) <em>(Amount paid now)</em></label>
                 <div class="input-wrapper">
-                    <input type="number" placeholder="0.00" required>
+                    <input type="number" name="initial" placeholder="0.00" required>
                 </div>
             </div>
 
@@ -81,7 +81,7 @@
             <div class="form-row">
                 <label>Remaining Balance (UGX)</label>
                 <div class="input-wrapper">
-                    <input type="number" class="balance-input" placeholder="Total minus Deposit" required>
+                    <input type="number" name="balance" class="balance-input" placeholder="Total minus Deposit" required>
                 </div>
             </div>
 
@@ -89,7 +89,7 @@
             <div class="form-row">
                 <label>Completion Due Date <em>(Final payment deadline)</em></label>
                 <div class="input-wrapper">
-                    <input type="date" class="date-highlight" required>
+                    <input type="date" name="duedate" class="date-highlight" required>
                 </div>
             </div>
 
