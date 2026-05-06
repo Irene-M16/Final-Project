@@ -1,0 +1,130 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Transport Charges
+  link(href='https://googleapis.com' rel='stylesheet')
+  link(rel='stylesheet' href='../css/transport.css')
+.page-wrapper
+  // Sidebar: Natural Scroll Layout
+  aside.sidebar
+    .sidebar-top
+      .logo-section
+        .logo-icon &#x1F3E2;
+        div
+          h1.brand-name NYONDO
+          p.brand-sub Admin Portal
+      nav.nav-menu
+        a.nav-item(href='adminDash.html')
+          span.icon &#x1F4CA;
+          |  Dashboard
+        a.nav-item(href='userReg.html')
+          span.icon &#x1F465;
+          |  Users
+        a.nav-item(href='supplier.html')
+          span.icon &#x1F4B3;
+          |  Supplier Credit
+        a.nav-item(href='depositScheme.html')
+          span.icon &#x1F3E6;
+          |  Deposit Scheme
+        a.nav-item.active(href='transport.html')
+          span.icon &#x1F69B;
+          |  Transport Charges
+        a.nav-item(href='reports.html')
+          span.icon &#x1F4CB;
+          |  Reports
+    .sidebar-bottom
+      a.nav-item.logout-link(href='login.html')
+        span.icon &rarrhk;&#xFE0F;
+        |  Logout
+  // Main Content Area
+  main.main-content
+    // ORGANIZED HEADER
+    header.header
+      .header-left
+        h2 Transport Charges Management
+        p.date-text Friday, May 1, 2026
+      .header-right
+        .bell-box
+          span.icon-bell &#x1F514;
+          span.red-dot
+        .header-divider
+        .user-profile
+          .user-text
+            span.user-name David Musoke
+            span.user-role Administrator
+          .user-avatar-circle &#x1F464;
+    // Current Policy Card (Light Mode)
+    section.policy-card
+      .policy-header
+        span.policy-icon &#x1F4CB;
+        h4 CURRENT TRANSPORT POLICY
+      .policy-content
+        .policy-item
+          span.bullet.red &#x25A0;
+          p
+            | Standard transport charge: 
+            strong UGX 30,000
+        .policy-item
+          span.bullet.green &#x25A0;
+          p
+            | Free transport for orders &ge; 
+            strong UGX 500,000
+            |  within
+            strong 10 km
+    // Dashboard Grid
+    .transport-grid
+      // Revenue Breakdown
+      section.content-card
+        h3.card-title REVENUE BREAKDOWN
+        .revenue-list
+          .rev-row
+            span Oct 2026
+            strong 420,000
+          .rev-row
+            span Nov 2026
+            strong 540,000
+          .rev-row
+            span Dec 2026
+            strong 680,000
+          .rev-row
+            span Jan 2026
+            strong 510,000
+          .rev-row
+            span Feb 2026
+            strong 590,000
+          .rev-row
+            span Mar 2026
+            strong 720,000
+          .rev-row
+            span Apr 2026
+            strong 390,000
+          .rev-total
+            span TOTAL REVENUE
+            span 3,850,000 UGX
+      // Monthly Trend Chart
+      section.content-card
+        h3.card-title MONTHLY TREND
+        .chart-container
+          .chart-bars
+            .bar-wrapper
+              .bar(style='height: 55%')
+              span Oct
+            .bar-wrapper
+              .bar(style='height: 70%')
+              span Nov
+            .bar-wrapper
+              .bar(style='height: 90%')
+              span Dec
+            .bar-wrapper
+              .bar(style='height: 65%')
+              span Jan
+            .bar-wrapper
+              .bar(style='height: 75%')
+              span Feb
+            .bar-wrapper
+              .bar(style='height: 95%')
+              span Mar
+            .bar-wrapper
+              .bar(style='height: 50%')
+              span Apr

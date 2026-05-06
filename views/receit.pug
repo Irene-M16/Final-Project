@@ -1,0 +1,66 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Receit Form
+  link(rel='stylesheet' href='../css/receit.css')
+  link(href='https://googleapis.com' rel='stylesheet')
+.print-actions.no-print
+  button.print-btn(onclick='window.print()')
+    | &#x1F5A8;&#xFE0F; Print Receipt
+  a.back-link(href='sales-dash.html') &larr; Back to Sales
+// The actual receipt document
+.receipt-container
+  header.receipt-header
+    .company-info
+      .logo-box &#x1F3E2;
+      div
+        h1 NYONDO HARDWARE
+        p Building Materials &amp; Construction
+    .invoice-meta
+      p
+        strong Receipt #:
+        span#receipt-no INV-2026-0845
+      p
+        strong Date:
+        span#receipt-date April 20, 2026
+  section.billing-section
+    .bill-to
+      p.label Billed To:
+      p#cust-name.customer-name Mukasa Construction Ltd
+      p#cust-phone +256 700 000 000
+      p#cust-loc Kira Road, Kampala
+    .payment-status
+      p.label Status:
+      span.status-badge PAID IN FULL
+  table.items-table
+    thead
+      tr
+        th Item Description
+        th.qty Qty
+        th.price Unit Price
+        th.total Total
+    tbody#receipt-items
+      tr
+        td Cement (Bamburi - 50kg)
+        td.qty 20
+        td.price 35,000
+        td.total 700,000
+      tr
+        td Iron Bars (12mm)
+        td.qty 15
+        td.price 28,000
+        td.total 420,000
+  .summary-section
+    .summary-row
+      span Subtotal (UGX):
+      span 1,120,000
+    .summary-row
+      span Transport:
+      span.free FREE
+    .summary-row.grand-total
+      span TOTAL AMOUNT:
+      span 1,120,000 UGX
+  footer.receipt-footer
+    p Thank you for your business!
+    p.terms Terms: Goods once sold are not returnable.

@@ -1,0 +1,47 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Create Account
+  link(href='https://googleapis.com' rel='stylesheet')
+  link(rel='stylesheet' href='../css/signup.css')
+.auth-wrapper
+  .auth-card
+    // Close Button Icon
+    a.close-btn(href='login.html') &#x2715;
+    .logo-header
+      .logo-icon &#x1F3E2;
+      h2 Create Account
+      p For Admins Only
+    form.auth-form(action='/signup' method='post')
+      .form-group
+        label Full Name*
+        input(type='text' name='fullname' placeholder='Enter your full name' required='')
+      .form-group
+        label Email Address*
+        input(type='email' name='email' placeholder='name@company.com' required='')
+      .form-group
+        label Country
+        select(name='country' required='')
+          option Uganda
+          option Kenya
+          option Tanzania
+      .form-group
+        label Phone Number*
+        input(type='tel' name='phonenumber' placeholder='+256 000 000 000' required='')
+      .form-group
+        label Password*
+        .password-wrapper
+          input(type='password' name='password' placeholder='••••••••' required='')
+          span.toggle-password &#x1F441;&#xFE0F;
+      .terms-group
+        input#terms(type='checkbox' name='terms' required='')
+        label(for='terms')
+          | I agree to the 
+          strong Terms of Service
+          |  and
+          strong Privacy Policy
+      button.submit-btn(type='submit') CREATE ACCOUNT
+    .auth-footer
+      | Sales and Store Manager login with the details Provided by the Admin
+      a(href='login.html') Login

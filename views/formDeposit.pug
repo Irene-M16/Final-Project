@@ -1,0 +1,77 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Register Deposit Customer
+  link(href='https://googleapis.com' rel='stylesheet')
+  link(rel='stylesheet' href='../css/formDeposit.css')
+section.form-container
+  .form-header
+    h3 New Deposit Scheme Registration
+    p Register a customer to start paying in installments for specific products.
+  form.nyondo-deposit-form(action='/formDeposit' method='post')
+    // Customer Name
+    .form-row
+      label
+        | Customer Full Name 
+        em (As per National ID)
+      .input-wrapper
+        input(type='text' name='fullname' placeholder='Enter full name' required='')
+    // NIN Number
+    .form-row
+      label
+        | NIN Number 
+        em (Identification)
+      .input-wrapper
+        input(type='text' name='number' placeholder='CM0000000XXXXX' maxlength='14' required='')
+    // Phone Number
+    .form-row
+      label
+        | Phone Number 
+        em (Contact)
+      .input-wrapper
+        input(type='tel' name='phone' placeholder='+256 000 000 000' required='')
+    // Employer
+    .form-row
+      label Employer / Business Name
+      .input-wrapper
+        input(type='text' name='employer' placeholder='Place of work or business' required='')
+    // Product Selection
+    .form-row
+      label Selected Product
+      .input-wrapper
+        select(name='product' required='')
+          option(value='') Choose product
+          option Cement (Bamburi)
+          option Iron Sheets (Pre-painted)
+          option Iron Bars (12mm)
+    // Total Amount
+    .form-row
+      label
+        | Total Goal Amount (UGX) 
+        em (Full price)
+      .input-wrapper
+        input(type='number' name='tamount' placeholder='e.g. 1,500,000' required='')
+    // Initial Deposit
+    .form-row
+      label
+        | Initial Deposit (UGX) 
+        em (Amount paid now)
+      .input-wrapper
+        input(type='number' name='initial' placeholder='0.00' required='')
+    // Balance
+    .form-row
+      label Remaining Balance (UGX)
+      .input-wrapper
+        input.balance-input(type='number' name='balance' placeholder='Total minus Deposit' required='')
+    // Due Date
+    .form-row
+      label
+        | Completion Due Date 
+        em (Final payment deadline)
+      .input-wrapper
+        input.date-highlight(type='date' name='duedate' required='')
+    // Form Actions
+    .form-footer
+      button.btn-submit(type='submit') Register Customer
+      button.btn-clear(type='reset') Clear Form

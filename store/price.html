@@ -1,200 +1,138 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nyondo - Pricing Management</title>
-    <link href="https://googleapis.com" rel="stylesheet">
-    <link rel="stylesheet" href="../css/price.css">
-</head>
-<body>
-
-<div class="dashboard-container">
-    <!-- Sidebar -->
-    <aside class="sidebar">
+    <link href="https://googleapis.com" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/price.css" />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
         <div class="logo-section">
-            <div class="logo-icon">🏢</div>
-            <div>
-                <h1 class="brand-name">NYONDO</h1>
-                <p class="brand-sub">Store Manager</p>
-            </div>
+          <div class="logo-icon">🏢</div>
+          <div>
+            <h1 class="brand-name">NYONDO</h1>
+            <p class="brand-sub">Store Manager</p>
+          </div>
         </div>
 
         <nav class="nav-menu">
-            <a href="storedash" class="nav-item">
-                <span class="icon">📊</span> Dashboard
-            </a>
-            <a href="stockreg" class="nav-item">
-                <span class="icon">➕</span> Stock Registration
-            </a>
-            <a href="invetory" class="nav-item">
-                <span class="icon">📦</span> Inventory
-            </a>
-            <a href="price" class="nav-item active">
-                <span class="icon">💲</span> Pricing
-            </a>
+          <a href="storedash" class="nav-item">
+            <span class="icon">📊</span> Dashboard
+          </a>
+          <a href="stockreg" class="nav-item">
+            <span class="icon">➕</span> Stock Registration
+          </a>
+          <a href="invetory" class="nav-item">
+            <span class="icon">📦</span> Inventory
+          </a>
+          <a href="price" class="nav-item active">
+            <span class="icon">💲</span> Pricing
+          </a>
         </nav>
 
         <div class="sidebar-footer">
-            <a href="../html/index.html" class="nav-item">
-                <span class="icon">↪️</span> Logout
-            </a>
+          <a href="../html/index.html" class="nav-item">
+            <span class="icon">↪️</span> Logout
+          </a>
         </div>
-    </aside>
+      </aside>
 
-    <!-- Main Content -->
-    <main class="main-content">
+      <!-- Main Content -->
+      <main class="main-content">
         <header class="header">
-            <div class="header-left">
-                <h2>Pricing Management</h2>
-                <p class="date-text">Tuesday, April 28, 2026</p>
+          <div class="header-left">
+            <h2>Pricing Management</h2>
+            <p class="date-text">Tuesday, April 28, 2026</p>
+          </div>
+          <div class="header-right">
+            <div class="notification-bell">🔔</div>
+            <div class="user-profile">
+              <div class="user-info">
+                <span class="user-name">Robert Okello</span>
+                <span class="user-role">Store Manager</span>
+              </div>
+              <div class="user-avatar">👤</div>
             </div>
-            <div class="header-right">
-                <div class="notification-bell">🔔</div>
-                <div class="user-profile">
-                    <div class="user-info">
-                        <span class="user-name">Robert Okello</span>
-                        <span class="user-role">Store Manager</span>
-                    </div>
-                    <div class="user-avatar">👤</div>
-                </div>
-            </div>
+          </div>
         </header>
 
         <!-- Pricing Card -->
         <section class="pricing-card">
-            <div class="pricing-header">
-                <h3>Product Pricing</h3>
-                <p>Manage pricing for all products</p>
-            </div>
+          <div class="pricing-header">
+            <h3>Product Pricing</h3>
+            <p>Manage pricing for all products</p>
+          </div>
 
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Product Name</th>
-                            <th>Unit Cost</th>
-                            <th>Current Price</th>
-                            <th>Profit Margin</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Cement (50kg bag)</td>
-                            <td class="text-muted">32,000 UGX</td>
-                            <td><strong>35,000 UGX</strong></td>
-                            <td><span class="margin-badge margin-low">9.4%</span></td>
-                            <td><a href="#" class="btn-update">Update Price</a></td>
-                        </tr>
-                        <tr>
-                            <td>Iron Bars 12mm (6m)</td>
-                            <td class="text-muted">25,000 UGX</td>
-                            <td><strong>28,000 UGX</strong></td>
-                            <td><span class="margin-badge margin-good">12.0%</span></td>
-                            <td><a href="#" class="btn-update">Update Price</a></td>
-                        </tr>
-                        <tr>
-                            <td>Iron Bars 16mm (6m)</td>
-                            <td class="text-muted">40,000 UGX</td>
-                            <td><strong>45,000 UGX</strong></td>
-                            <td><span class="margin-badge margin-good">12.5%</span></td>
-                            <td><a href="#" class="btn-update">Update Price</a></td>
-                        </tr>
-                        <tr>
-                            <td>Nails 1kg</td>
-                            <td class="text-muted">7,000 UGX</td>
-                            <td><strong>8,000 UGX</strong></td>
-                            <td><span class="margin-badge margin-good">14.3%</span></td>
-                            <td><a href="#" class="btn-update">Update Price</a></td>
-                        </tr>
-                        <tr>
-                            <td>Wire Mesh (2m x 3m)</td>
-                            <td class="text-muted">58,000 UGX</td>
-                            <td><strong>65,000 UGX</strong></td>
-                            <td><span class="margin-badge margin-good">12.1%</span></td>
-                            <td><a href="#" class="btn-update">Update Price</a></td>
-                        </tr>
-                        <tr>
-                            <td>Barbed Wire (50m roll)</td>
-                            <td class="text-muted">38,000 UGX</td>
-                            <td><strong>42,000 UGX</strong></td>
-                            <td><span class="margin-badge margin-good">10.5%</span></td>
-                            <td><a href="#" class="btn-update">Update Price</a></td>
-                        </tr>
-                        <tr>
-                            <td>Iron Sheets (3m)</td>
-                            <td class="text-muted">34,000 UGX</td>
-                            <td><strong>38,000 UGX</strong></td>
-                            <td><span class="margin-badge margin-good">11.8%</span></td>
-                            <td><a href="#" class="btn-update">Update Price</a></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Product Name</th>
+                  <th>Unit Cost</th>
+                  <th>Current Price</th>
+                  <th>Profit Margin</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Cement (50kg bag)</td>
+                  <td class="text-muted">32,000 UGX</td>
+                  <td><strong>35,000 UGX</strong></td>
+                  <td><span class="margin-badge margin-low">9.4%</span></td>
+                  <td><a href="#" class="btn-update">Update Price</a></td>
+                </tr>
+                <tr>
+                  <td>Iron Bars 12mm (6m)</td>
+                  <td class="text-muted">25,000 UGX</td>
+                  <td><strong>28,000 UGX</strong></td>
+                  <td><span class="margin-badge margin-good">12.0%</span></td>
+                  <td><a href="#" class="btn-update">Update Price</a></td>
+                </tr>
+                <tr>
+                  <td>Iron Bars 16mm (6m)</td>
+                  <td class="text-muted">40,000 UGX</td>
+                  <td><strong>45,000 UGX</strong></td>
+                  <td><span class="margin-badge margin-good">12.5%</span></td>
+                  <td><a href="#" class="btn-update">Update Price</a></td>
+                </tr>
+                <tr>
+                  <td>Nails 1kg</td>
+                  <td class="text-muted">7,000 UGX</td>
+                  <td><strong>8,000 UGX</strong></td>
+                  <td><span class="margin-badge margin-good">14.3%</span></td>
+                  <td><a href="#" class="btn-update">Update Price</a></td>
+                </tr>
+                <tr>
+                  <td>Wire Mesh (2m x 3m)</td>
+                  <td class="text-muted">58,000 UGX</td>
+                  <td><strong>65,000 UGX</strong></td>
+                  <td><span class="margin-badge margin-good">12.1%</span></td>
+                  <td><a href="#" class="btn-update">Update Price</a></td>
+                </tr>
+                <tr>
+                  <td>Barbed Wire (50m roll)</td>
+                  <td class="text-muted">38,000 UGX</td>
+                  <td><strong>42,000 UGX</strong></td>
+                  <td><span class="margin-badge margin-good">10.5%</span></td>
+                  <td><a href="#" class="btn-update">Update Price</a></td>
+                </tr>
+                <tr>
+                  <td>Iron Sheets (3m)</td>
+                  <td class="text-muted">34,000 UGX</td>
+                  <td><strong>38,000 UGX</strong></td>
+                  <td><span class="margin-badge margin-good">11.8%</span></td>
+                  <td><a href="#" class="btn-update">Update Price</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </section>
-    </main>
-</div>
-
-</body>
+      </main>
+    </div>
+  </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

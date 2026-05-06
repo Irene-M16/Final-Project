@@ -1,0 +1,83 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Sales Receipts
+  link(rel='stylesheet' href='../css/receipts.css')
+  link(href='https://googleapis.com' rel='stylesheet')
+.dashboard-container
+  aside.sidebar
+    .logo-section
+      .logo-icon &#x1F3E2;
+      div
+        h1.brand-name NYONDO
+        p.brand-sub Sales Portal
+    nav.nav-menu
+      a.nav-item(href='sales-dash.html')
+        span.icon &#x1F4CA;
+        |  Dashboard
+      a.nav-item(href='record.html')
+        span.icon &#x1F6D2;
+        |  Record Sale
+      a.nav-item(href='stockLevel.html')
+        span.icon &#x1F4E6;
+        |  Check Stock
+      a.nav-item.active(href='receipts.html')
+        span.icon &#x1F4D1;
+        |  Receipts
+    .sidebar-footer
+      a.nav-item(href='../html/index.html')
+        span.icon &rarrhk;&#xFE0F;
+        |  Logout
+  main.main-content
+    header.header
+      .header-left
+        h2 Sales Receipts
+        p.date-text Tuesday, April 28, 2026
+      .header-right
+        .notification-bell &#x1F514;
+        .user-profile
+          .user-info
+            span.user-name Jane Namubiru
+            span.user-role Sales Attendant
+          .user-avatar &#x1F464;
+    section.table-section
+      .table-controls
+        .search-container
+          span.search-icon &#x1F50D;
+          input.search-input(type='text' placeholder='Search receipts by invoice ID or customer...')
+        a.primary-btn(href='receit.html') &#x1F4D1; Print Receipt
+      .table-container
+        table
+          thead
+            tr
+              th Invoice ID
+              th Customer
+              th Items
+              th Amount (UGX)
+              th Transport
+              th Date &amp; Time
+              th Actions
+          tbody
+            tr
+              td
+                strong INV-2026-0845
+              td Mukasa Construction Ltd
+              td.items-cell Cement x20, Iron Bars 12mm x15
+              td 1,120,000
+              td
+                span.free-badge Free
+              td Apr 14, 10:45 AM
+              td
+                a.view-link(href='#') View
+            tr
+              td
+                strong INV-2026-0844
+              td Nakato Builders
+              td.items-cell Iron Sheets x25
+              td 950,000
+              td
+                span.free-badge Free
+              td Apr 14, 10:12 AM
+              td
+                a.view-link(href='#') View

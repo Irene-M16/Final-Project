@@ -1,0 +1,106 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title User Management
+  link(href='https://googleapis.com' rel='stylesheet')
+  // Link to the CSS file
+  link(rel='stylesheet' href='../css/userReg.css')
+.page-wrapper
+  // Sidebar: Natural Scroll Column
+  aside.sidebar
+    .sidebar-top
+      .logo-section
+        .logo-icon &#x1F3E2;
+        div
+          h1.brand-name NYONDO
+          p.brand-sub Admin Portal
+      nav.nav-menu
+        a.nav-item(href='adminDash.html')
+          span.icon &#x1F4CA;
+          |  Dashboard
+        a.nav-item.active(href='userReg.html')
+          span.icon &#x1F465;
+          |  Users
+        a.nav-item(href='supplier.html')
+          span.icon &#x1F4B3;
+          |  Supplier Credit
+        a.nav-item(href='depositScheme.html')
+          span.icon &#x1F3E6;
+          |  Deposit Scheme
+        a.nav-item(href='transport.html')
+          span.icon &#x1F69B;
+          |  Transport Charges
+        a.nav-item(href='reports.html')
+          span.icon &#x1F4CB;
+          |  Reports
+    .sidebar-bottom
+      a.nav-item.logout-link(href='login.html')
+        span.icon &rarrhk;&#xFE0F;
+        |  Logout
+  // Main Content Area
+  main.main-content
+    // ORGANIZED HEADER
+    header.header
+      .header-left
+        h2 User Management
+        p.date-text Wednesday, April 29, 2026
+      .header-right
+        .bell-box
+          span.icon-bell &#x1F514;
+          span.red-dot
+        .header-divider
+        .user-profile
+          .user-text
+            span.user-name David Musoke
+            span.user-role Administrator
+          .user-avatar-circle &#x1F464;
+    // Table Controls
+    section.table-controls
+      .search-box
+        span.search-icon &#x1F50D;
+        input(type='text' placeholder='Search users by name or email...')
+      a.primary-btn(href='addUser.html') + Add New User
+    // Users Table
+    section.table-card
+      .table-container
+        table
+          thead
+            tr
+              th User Name
+              th Role
+              th Email Address
+              th Contact Number
+              th Status
+              th Actions
+          tbody
+            tr
+              td
+                strong David Musoke
+              td Administrator
+              td david.musoke@nyondo.com
+              td +256 701 111 222
+              td
+                span.status-pill.active-pill Active
+              td
+                a.edit-link(href='#') Edit User
+            tr
+              td
+                strong Robert Okello
+              td Store Manager
+              td robert.okello@nyondo.com
+              td +256 702 333 444
+              td
+                span.status-pill.active-pill Active
+              td
+                a.edit-link(href='#') Edit User
+            tr
+              td
+                strong Jane Namubiru
+              td Sales Attendant
+              td jane.namubiru@nyondo.com
+              td +256 703 555 666
+              td
+                span.status-pill.active-pill Active
+              td
+                a.edit-link(href='#') Edit User

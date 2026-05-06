@@ -1,92 +1,116 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Record Credit Purchase</title>
-    <link href="https://googleapis.com" rel="stylesheet">
-    <link rel="stylesheet" href="../css/creditForm.css">
-</head>
-<body>
-
+    <link href="https://googleapis.com" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/creditForm.css" />
+  </head>
+  <body>
     <section class="form-container">
-        <div class="form-header">
-            <h3>Record Credit Purchase</h3>
-            <p>Log transactions where products are taken now and settled later.</p>
+      <div class="form-header">
+        <h3>Record Credit Purchase</h3>
+        <p>Log transactions where products are taken now and settled later.</p>
+      </div>
+
+      <form action="/creditForm" method="post" class="nyondo-credit-form">
+        <!-- Party Name -->
+        <div class="form-row">
+          <label>Supplier/Customer Name <em>(required)</em></label>
+          <div class="input-wrapper">
+            <input
+              type="text"
+              name="customername"
+              placeholder="Enter full name"
+              required
+            />
+          </div>
         </div>
 
-        <form action="/creditForm" method="post" class="nyondo-credit-form">
-            <!-- Party Name -->
-            <div class="form-row">
-                <label>Supplier/Customer Name <em>(required)</em></label>
-                <div class="input-wrapper">
-                    <input type="text" name="customername" placeholder="Enter full name" required>
-                </div>
-            </div>
+        <!-- Phone Number (Requested) -->
+        <div class="form-row">
+          <label>Phone Number <em>(Contact)</em></label>
+          <div class="input-wrapper">
+            <input
+              type="tel"
+              name="phonenumber"
+              placeholder="+256 000 000 000"
+              required
+            />
+          </div>
+        </div>
 
-            <!-- Phone Number (Requested) -->
-            <div class="form-row">
-                <label>Phone Number <em>(Contact)</em></label>
-                <div class="input-wrapper">
-                    <input type="tel" name="phonenumber" placeholder="+256 000 000 000" required>
-                </div>
-            </div>
+        <!-- Address (Requested) -->
+        <div class="form-row">
+          <label>Physical Address</label>
+          <div class="input-wrapper">
+            <input
+              type="text"
+              name="address"
+              placeholder="Village, Town or Building"
+            />
+          </div>
+        </div>
 
-            <!-- Address (Requested) -->
-            <div class="form-row">
-                <label>Physical Address</label>
-                <div class="input-wrapper">
-                    <input type="text" name="address" placeholder="Village, Town or Building">
-                </div>
-            </div>
+        <!-- NIN Number (Requested) -->
+        <div class="form-row">
+          <label>NIN Number <em>(Verification)</em></label>
+          <div class="input-wrapper">
+            <input
+              type="text"
+              name="ninnumber"
+              placeholder="CM0000000XXXXX"
+              maxlength="14"
+            />
+          </div>
+        </div>
 
-            <!-- NIN Number (Requested) -->
-            <div class="form-row">
-                <label>NIN Number <em>(Verification)</em></label>
-                <div class="input-wrapper">
-                    <input type="text" name="ninnumber" placeholder="CM0000000XXXXX" maxlength="14">
-                </div>
-            </div>
+        <!-- Total Amount -->
+        <div class="form-row">
+          <label>Total Transaction Value (UGX)</label>
+          <div class="input-wrapper">
+            <input
+              type="number"
+              name="totalValue"
+              placeholder="Total cost of all items"
+            />
+          </div>
+        </div>
 
-            <!-- Total Amount -->
-            <div class="form-row">
-                <label>Total Transaction Value (UGX)</label>
-                <div class="input-wrapper">
-                    <input type="number" name="totalValue" placeholder="Total cost of all items">
-                </div>
-            </div>
+        <!-- Date of Purchase -->
+        <div class="form-row">
+          <label>Date of Purchase</label>
+          <div class="input-wrapper">
+            <input type="date" name="dateOfPurchase" required />
+          </div>
+        </div>
 
-            <!-- Date of Purchase -->
-            <div class="form-row">
-                <label>Date of Purchase</label>
-                <div class="input-wrapper">
-                    <input type="date" name="dateOfPurchase" required>
-                </div>
-            </div>
+        <!-- Credit Due Date (Requested) -->
+        <div class="form-row">
+          <label>Credit Due Date <em>(Deadline)</em></label>
+          <div class="input-wrapper">
+            <input type="date" name="duedate" class="highlight-date" required />
+          </div>
+        </div>
 
-            <!-- Credit Due Date (Requested) -->
-            <div class="form-row">
-                <label>Credit Due Date <em>(Deadline)</em></label>
-                <div class="input-wrapper">
-                    <input type="date" name="duedate" class="highlight-date" required>
-                </div>
-            </div>
+        <!-- Items -->
+        <div class="form-row">
+          <label>Items/Description</label>
+          <div class="input-wrapper">
+            <textarea
+              name="textarea"
+              placeholder="List products taken on credit..."
+            ></textarea>
+          </div>
+        </div>
 
-            <!-- Items -->
-            <div class="form-row">
-                <label>Items/Description</label>
-                <div class="input-wrapper">
-                    <textarea name="textarea" placeholder="List products taken on credit..."></textarea>
-                </div>
-            </div>
-
-            <!-- Actions -->
-            <div class="form-footer">
-                <button type="submit" class="btn-submit">Save Credit Record</button>
-                <button type="reset" class="btn-clear">Clear Form</button>
-            </div>
-        </form>
+        <!-- Actions -->
+        <div class="form-footer">
+          <button type="submit" class="btn-submit">Save Credit Record</button>
+          <button type="reset" class="btn-clear">Clear Form</button>
+        </div>
+      </form>
     </section>
-
-</body>
+  </body>
 </html>

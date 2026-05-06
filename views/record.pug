@@ -1,0 +1,81 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Record Sale
+  link(href='https://googleapis.com' rel='stylesheet')
+  link(rel='stylesheet' href='../css/record.css')
+.dashboard-container
+  aside.sidebar
+    .logo-section
+      .logo-icon &#x1F3E2;
+      div
+        h1.brand-name NYONDO
+        p.brand-sub Sales Portal
+    nav.nav-menu
+      a.nav-item(href='salesDash')
+        span.icon &#x1F4CA;
+        |  Dashboard
+      a.nav-item.active(href='record')
+        span.icon &#x1F6D2;
+        |  Record Sale
+      a.nav-item(href='stockLevel')
+        span.icon &#x1F4E6;
+        |  Check Stock
+      a.nav-item(href='receipts')
+        span.icon &#x1F4D1;
+        |  Receipts
+    .sidebar-footer
+      a.nav-item(href='../html/index.html')
+        span.icon &rarrhk;&#xFE0F;
+        |  Logout
+  // main content
+  main.main-content
+    header.header
+      .header-left
+        h2 Record New Sale
+        p.date-text Monday, April 20, 2026
+      .header-right
+        .notification-bell &#x1F514;
+        .user-profile
+          .user-info
+            span.user-name User&apos; name
+            span.user-role Sales Attendant
+          .user-avatar &#x1F464;
+    section.form-container
+      form(action='/record' method='post')
+        h3 New Sale Transaction
+        .form-grid
+          .form-group
+            label Customer Name
+            input(type='text' name='customername' placeholder='Enter customer name')
+          .form-group
+            label Phone Number
+            input(type='text' name='phonenumber' placeholder='0700 000 000')
+          .form-group
+            label Select Product
+            select(name='product')
+              option(value='' disabled='' select='') Choose a product
+              option(value='') Hammer
+              option(value='') Iron Sheets
+              option(value='') Nails
+              option(value='') Paint
+          .form-group
+            label Quantity
+            input(type='text' name='quantity' placeholder='Enter quantity')
+          .form-group
+            label Delivery Location
+            input(type='text' name='location' placeholder='Enter delivery address')
+          .form-group
+            label Distance (km)
+            input(type='text' name='distance' placeholder='Within 10km')
+        .info-box
+          span.info-icon &#x1F69B;
+          div
+            strong Transport Charges
+            br
+            |                 Free delivery for orders &ge; 500,000 UGX within 10km. Otherwise,
+            |                 30,000 UGX applies.
+        .form-actions
+          a.action-link.submit-link(href='receit.html') &#x1F4D1; Generate Receipt
+          button.action-link.clear-link Clear Form

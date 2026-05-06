@@ -1,0 +1,137 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Reports &amp; Analytics
+  link(href='https://googleapis.com' rel='stylesheet')
+  link(rel='stylesheet' href='../css/reports.css')
+.page-wrapper
+  // Sidebar (Same as other pages)
+  aside.sidebar
+    .sidebar-top
+      .logo-section
+        .logo-icon &#x1F3E2;
+        div
+          h1.brand-name NYONDO
+          p.brand-sub Admin Portal
+      nav.nav-menu
+        a.nav-item(href='adminDash')
+          span.icon &#x1F4CA;
+          |  Dashboard
+        a.nav-item(href='userReg')
+          span.icon &#x1F465;
+          |  Users
+        a.nav-item(href='supplier')
+          span.icon &#x1F4B3;
+          |  Supplier Credit
+        a.nav-item(href='depositScheme')
+          span.icon &#x1F3E6;
+          |  Deposit Scheme
+        a.nav-item(href='transport')
+          span.icon &#x1F69B;
+          |  Transport Charges
+        a.nav-item.active(href='reports')
+          span.icon &#x1F4CB;
+          |  Reports
+    .sidebar-bottom
+      a.nav-item.logout-link(href='login.html')
+        span.icon &rarrhk;&#xFE0F;
+        |  Logout
+  main.main-content
+    header.header
+      .header-left
+        h2 Reports &amp; Analytics
+        p.date-text Friday, May 1, 2026
+      .header-right
+        .bell-box
+          span.icon-bell &#x1F514;
+          span.red-dot
+        .header-divider
+        .user-profile
+          .user-text
+            span.user-name David Musoke
+            span.user-role Administrator
+          .user-avatar-circle &#x1F464;
+    // Tab Switcher
+    .tabs-nav
+      button.tab-btn.active(onclick="openTab(event, 'sales-tab')")
+        | Sales Reports
+      button.tab-btn(onclick="openTab(event, 'supplier-tab')")
+        | Supplier Credit Reports
+      button.tab-btn(onclick="openTab(event, 'deposit-tab')")
+        | Deposit Reports
+    // 1. SALES REPORT SECTION
+    section#sales-tab.tab-content.active
+      .report-card
+        h3.report-title Generate Sales Report
+        form.report-form
+          .form-grid
+            .form-group
+              label Report Type
+              select
+                option General Sales
+            .form-group
+              label Format
+              select
+                option PDF Document
+                option Excel Sheet
+            .form-group
+              label Start Date
+              input(type='date')
+            .form-group
+              label End Date
+              input(type='date')
+          button.generate-btn(type='submit')
+            | &#x1F4E5; Generate Sales Report
+    // 2. SUPPLIER REPORT SECTION
+    section#supplier-tab.tab-content
+      .report-card
+        h3.report-title Supplier Credit Report
+        form.report-form
+          .form-grid
+            .form-group
+              label Supplier
+              select
+                option All Suppliers
+            .form-group
+              label Status Filter
+              select
+                option All Statuses
+                option Pending
+                option Overdue
+          button.generate-btn(type='submit')
+            | &#x1F4E5; Generate Credit Report
+    // 3. DEPOSIT REPORT SECTION
+    section#deposit-tab.tab-content
+      .report-card
+        h3.report-title Deposit Scheme Report
+        form.report-form
+          .form-grid
+            .form-group
+              label Product Filter
+              select
+                option All Products
+            .form-group
+              label Status
+              select
+                option All Statuses
+                option Ready
+          button.generate-btn(type='submit')
+            | &#x1F4E5; Generate Deposit Report
+// to switch the tabs
+script.
+  function openTab(evt, tabName) {
+  // Hide all content sections
+  var contents = document.getElementsByClassName("tab-content");
+  for (var i = 0; i < contents.length; i++) {
+  contents[i].classList.remove("active");
+  }
+  // Remove "active" color from all buttons
+  var buttons = document.getElementsByClassName("tab-btn");
+  for (var i = 0; i < buttons.length; i++) {
+  buttons[i].classList.remove("active");
+  }
+  // Show the clicked section and highlight the button
+  document.getElementById(tabName).classList.add("active");
+  evt.currentTarget.classList.add("active");
+  }

@@ -1,0 +1,38 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Login
+  link(rel='stylesheet' href='../css/login.css')
+.login-container
+  // header
+  .login-header
+    h1 NYONDO General Hardware
+    p Hardware Management System
+  // login-card
+  .login-card
+    h2 Login to System
+    p.subtitle Select your role and enter credentials
+    form.login-form(action='/login' method='post')
+      .form-group
+        label User Role
+        select(name='role' required='')
+          option(value='' disabled='' selected='') Select your role
+          option(value='admin') Admin/Manager
+          option(value='sales') Sales Attendant
+          option(value='store') Store Manager
+      .form-group
+        label Username
+        .input-icon-wrapper
+          span.input-icon &#x1F464;
+          input(type='text' name='userName' placeholder='Enter your username' required='')
+      .form-group
+        label Password
+        .input-icon-wrapper
+          span.input-icon &#x1F512;
+          input(type='password' name='password' placeholder='Enter your password' required='')
+      button.btn-login(type='submit') Login to Dashboard
+    // Footer-links
+    .login-footer
+      a.forgot-link(href='forgotPassword.html') Forgot password?
+      a.back-link(href='index.html') &larr; Back to Home

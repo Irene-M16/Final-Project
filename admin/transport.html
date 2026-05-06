@@ -1,170 +1,172 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nyondo Admin - Transport Charges</title>
-    <link href="https://googleapis.com" rel="stylesheet">
-    <link rel="stylesheet" href="../css/transport.css">
-</head>
-<body>
-
-<div class="page-wrapper">
-    <!-- Sidebar: Natural Scroll Layout -->
-    <aside class="sidebar">
+    <link href="https://googleapis.com" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/transport.css" />
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <!-- Sidebar: Natural Scroll Layout -->
+      <aside class="sidebar">
         <div class="sidebar-top">
-            <div class="logo-section">
-                <div class="logo-icon">🏢</div>
-                <div>
-                    <h1 class="brand-name">NYONDO</h1>
-                    <p class="brand-sub">Admin Portal</p>
-                </div>
+          <div class="logo-section">
+            <div class="logo-icon">🏢</div>
+            <div>
+              <h1 class="brand-name">NYONDO</h1>
+              <p class="brand-sub">Admin Portal</p>
             </div>
+          </div>
 
-            <nav class="nav-menu">
-                <a href="adminDash.html" class="nav-item"><span class="icon">📊</span> Dashboard</a>
-                <a href="userReg.html" class="nav-item"><span class="icon">👥</span> Users</a>
-                <a href="supplier.html" class="nav-item"><span class="icon">💳</span> Supplier Credit</a>
-                <a href="depositScheme.html" class="nav-item"><span class="icon">🏦</span> Deposit Scheme</a>
-                <a href="transport.html" class="nav-item active"><span class="icon">🚛</span> Transport Charges</a>
-                <a href="reports.html" class="nav-item"><span class="icon">📋</span> Reports</a>
-            </nav>
+          <nav class="nav-menu">
+            <a href="adminDash.html" class="nav-item"
+              ><span class="icon">📊</span> Dashboard</a
+            >
+            <a href="userReg.html" class="nav-item"
+              ><span class="icon">👥</span> Users</a
+            >
+            <a href="supplier.html" class="nav-item"
+              ><span class="icon">💳</span> Supplier Credit</a
+            >
+            <a href="depositScheme.html" class="nav-item"
+              ><span class="icon">🏦</span> Deposit Scheme</a
+            >
+            <a href="transport.html" class="nav-item active"
+              ><span class="icon">🚛</span> Transport Charges</a
+            >
+            <a href="reports.html" class="nav-item"
+              ><span class="icon">📋</span> Reports</a
+            >
+          </nav>
         </div>
 
         <div class="sidebar-bottom">
-            <a href="login.html" class="nav-item logout-link">
-                <span class="icon">↪️</span> Logout
-            </a>
+          <a href="login.html" class="nav-item logout-link">
+            <span class="icon">↪️</span> Logout
+          </a>
         </div>
-    </aside>
+      </aside>
 
-    <!-- Main Content Area -->
-    <main class="main-content">
+      <!-- Main Content Area -->
+      <main class="main-content">
         <!-- ORGANIZED HEADER -->
         <header class="header">
-            <div class="header-left">
-                <h2>Transport Charges Management</h2>
-                <p class="date-text">Friday, May 1, 2026</p>
-            </div>
+          <div class="header-left">
+            <h2>Transport Charges Management</h2>
+            <p class="date-text">Friday, May 1, 2026</p>
+          </div>
 
-            <div class="header-right">
-                <div class="bell-box">
-                    <span class="icon-bell">🔔</span>
-                    <span class="red-dot"></span>
-                </div>
-                <div class="header-divider"></div>
-                <div class="user-profile">
-                    <div class="user-text">
-                        <span class="user-name">David Musoke</span>
-                        <span class="user-role">Administrator</span>
-                    </div>
-                    <div class="user-avatar-circle">👤</div>
-                </div>
+          <div class="header-right">
+            <div class="bell-box">
+              <span class="icon-bell">🔔</span>
+              <span class="red-dot"></span>
             </div>
+            <div class="header-divider"></div>
+            <div class="user-profile">
+              <div class="user-text">
+                <span class="user-name">David Musoke</span>
+                <span class="user-role">Administrator</span>
+              </div>
+              <div class="user-avatar-circle">👤</div>
+            </div>
+          </div>
         </header>
 
         <!-- Current Policy Card (Light Mode) -->
         <section class="policy-card">
-            <div class="policy-header">
-                <span class="policy-icon">📋</span>
-                <h4>CURRENT TRANSPORT POLICY</h4>
+          <div class="policy-header">
+            <span class="policy-icon">📋</span>
+            <h4>CURRENT TRANSPORT POLICY</h4>
+          </div>
+          <div class="policy-content">
+            <div class="policy-item">
+              <span class="bullet red">■</span>
+              <p>Standard transport charge: <strong>UGX 30,000</strong></p>
             </div>
-            <div class="policy-content">
-                <div class="policy-item">
-                    <span class="bullet red">■</span>
-                    <p>Standard transport charge: <strong>UGX 30,000</strong></p>
-                </div>
-                <div class="policy-item">
-                    <span class="bullet green">■</span>
-                    <p>Free transport for orders ≥ <strong>UGX 500,000</strong> within <strong>10 km</strong></p>
-                </div>
+            <div class="policy-item">
+              <span class="bullet green">■</span>
+              <p>
+                Free transport for orders ≥ <strong>UGX 500,000</strong> within
+                <strong>10 km</strong>
+              </p>
             </div>
+          </div>
         </section>
 
         <!-- Dashboard Grid -->
         <div class="transport-grid">
-            <!-- Revenue Breakdown -->
-            <section class="content-card">
-                <h3 class="card-title">REVENUE BREAKDOWN</h3>
-                <div class="revenue-list">
-                    <div class="rev-row"><span>Oct 2026</span><strong>420,000</strong></div>
-                    <div class="rev-row"><span>Nov 2026</span><strong>540,000</strong></div>
-                    <div class="rev-row"><span>Dec 2026</span><strong>680,000</strong></div>
-                    <div class="rev-row"><span>Jan 2026</span><strong>510,000</strong></div>
-                    <div class="rev-row"><span>Feb 2026</span><strong>590,000</strong></div>
-                    <div class="rev-row"><span>Mar 2026</span><strong>720,000</strong></div>
-                    <div class="rev-row"><span>Apr 2026</span><strong>390,000</strong></div>
-                    <div class="rev-total">
-                        <span>TOTAL REVENUE</span>
-                        <span>3,850,000 UGX</span>
-                    </div>
-                </div>
-            </section>
+          <!-- Revenue Breakdown -->
+          <section class="content-card">
+            <h3 class="card-title">REVENUE BREAKDOWN</h3>
+            <div class="revenue-list">
+              <div class="rev-row">
+                <span>Oct 2026</span><strong>420,000</strong>
+              </div>
+              <div class="rev-row">
+                <span>Nov 2026</span><strong>540,000</strong>
+              </div>
+              <div class="rev-row">
+                <span>Dec 2026</span><strong>680,000</strong>
+              </div>
+              <div class="rev-row">
+                <span>Jan 2026</span><strong>510,000</strong>
+              </div>
+              <div class="rev-row">
+                <span>Feb 2026</span><strong>590,000</strong>
+              </div>
+              <div class="rev-row">
+                <span>Mar 2026</span><strong>720,000</strong>
+              </div>
+              <div class="rev-row">
+                <span>Apr 2026</span><strong>390,000</strong>
+              </div>
+              <div class="rev-total">
+                <span>TOTAL REVENUE</span>
+                <span>3,850,000 UGX</span>
+              </div>
+            </div>
+          </section>
 
-            <!-- Monthly Trend Chart -->
-            <section class="content-card">
-                <h3 class="card-title">MONTHLY TREND</h3>
-                <div class="chart-container">
-                    <div class="chart-bars">
-                        <div class="bar-wrapper"><div class="bar" style="height: 55%;"></div><span>Oct</span></div>
-                        <div class="bar-wrapper"><div class="bar" style="height: 70%;"></div><span>Nov</span></div>
-                        <div class="bar-wrapper"><div class="bar" style="height: 90%;"></div><span>Dec</span></div>
-                        <div class="bar-wrapper"><div class="bar" style="height: 65%;"></div><span>Jan</span></div>
-                        <div class="bar-wrapper"><div class="bar" style="height: 75%;"></div><span>Feb</span></div>
-                        <div class="bar-wrapper"><div class="bar" style="height: 95%;"></div><span>Mar</span></div>
-                        <div class="bar-wrapper"><div class="bar" style="height: 50%;"></div><span>Apr</span></div>
-                    </div>
+          <!-- Monthly Trend Chart -->
+          <section class="content-card">
+            <h3 class="card-title">MONTHLY TREND</h3>
+            <div class="chart-container">
+              <div class="chart-bars">
+                <div class="bar-wrapper">
+                  <div class="bar" style="height: 55%"></div>
+                  <span>Oct</span>
                 </div>
-            </section>
+                <div class="bar-wrapper">
+                  <div class="bar" style="height: 70%"></div>
+                  <span>Nov</span>
+                </div>
+                <div class="bar-wrapper">
+                  <div class="bar" style="height: 90%"></div>
+                  <span>Dec</span>
+                </div>
+                <div class="bar-wrapper">
+                  <div class="bar" style="height: 65%"></div>
+                  <span>Jan</span>
+                </div>
+                <div class="bar-wrapper">
+                  <div class="bar" style="height: 75%"></div>
+                  <span>Feb</span>
+                </div>
+                <div class="bar-wrapper">
+                  <div class="bar" style="height: 95%"></div>
+                  <span>Mar</span>
+                </div>
+                <div class="bar-wrapper">
+                  <div class="bar" style="height: 50%"></div>
+                  <span>Apr</span>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
-    </main>
-</div>
-
-</body>
+      </main>
+    </div>
+  </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

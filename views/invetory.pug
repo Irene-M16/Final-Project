@@ -1,0 +1,143 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Inventory Management
+  link(href='https://googleapis.com' rel='stylesheet')
+  link(rel='stylesheet' href='../css/invetory.css')
+.dashboard-container
+  // Sidebar
+  aside.sidebar
+    .logo-section
+      .logo-icon &#x1F3E2;
+      div
+        h1.brand-name NYONDO
+        p.brand-sub Store Manager
+    nav.nav-menu
+      a.nav-item(href='storedash')
+        span.icon &#x1F4CA;
+        |  Dashboard
+      a.nav-item(href='stockreg')
+        span.icon &#x2795;
+        |  Stock Registration
+      a.nav-item.active(href='inventory')
+        span.icon &#x1F4E6;
+        |  Inventory
+      a.nav-item(href='price')
+        span.icon &#x1F4B2;
+        |  Pricing
+    .sidebar-footer
+      a.nav-item(href='../html/index')
+        span.icon &rarrhk;&#xFE0F;
+        |  Logout
+  // Main Content
+  main.main-content
+    header.header
+      .header-left
+        h2 Inventory Management
+        p.date-text Tuesday, April 28, 2026
+      .header-right
+        .notification-bell &#x1F514;
+        .user-profile
+          .user-info
+            span.user-name Robert Okello
+            span.user-role Store Manager
+          .user-avatar &#x1F464;
+    // Table Controls
+    section.table-controls
+      .search-box
+        span.search-icon &#x1F50D;
+        input(type='text' placeholder='Search Inventory...')
+      a.btn.primary-btn(href='stockreg') + Add New Stock
+    // Inventory Table
+    section.table-card
+      .table-container
+        table
+          thead
+            tr
+              th Product Name
+              th Quantity
+              th Unit Cost
+              th Unit Price
+              th Supplier
+              th Last Restocked
+              th Status
+              th Actions
+          tbody
+            tr
+              td Cement (50kg bag)
+              td 450 units
+              td 32,000
+              td 35,000
+              td Hima Cement
+              td Apr 10, 2026
+              td
+                span.status-pill.in-stock In Stock
+              td
+                a.edit-link(href='#') Edit
+            tr
+              td Iron Bars 12mm (6m)
+              td 180 units
+              td 25,000
+              td 28,000
+              td Steel Rolling Mills
+              td Apr 12, 2026
+              td
+                span.status-pill.in-stock In Stock
+              td
+                a.edit-link(href='#') Edit
+            tr
+              td Iron Bars 16mm (6m)
+              td 120 units
+              td 40,000
+              td 45,000
+              td Steel Rolling Mills
+              td Apr 11, 2026
+              td
+                span.status-pill.in-stock In Stock
+              td
+                a.edit-link(href='#') Edit
+            tr
+              td Nails 1kg
+              td 300 units
+              td 7,000
+              td 8,000
+              td Roofings Ltd
+              td Apr 09, 2026
+              td
+                span.status-pill.in-stock In Stock
+              td
+                a.edit-link(href='#') Edit
+            tr
+              td Wire Mesh (2m x 3m)
+              td 80 units
+              td 58,000
+              td 65,000
+              td Wire Industries
+              td Apr 13, 2026
+              td
+                span.status-pill.in-stock In Stock
+              td
+                a.edit-link(href='#') Edit
+            tr
+              td Barbed Wire (50m roll)
+              td 45 units
+              td 38,000
+              td 42,000
+              td Wire Industries
+              td Apr 08, 2026
+              td
+                span.status-pill.low-stock Low Stock
+              td
+                a.edit-link(href='#') Edit
+            tr
+              td Iron Sheets (3m)
+              td 200 units
+              td 34,000
+              td 38,000
+              td Roofings Ltd
+              td Apr 14, 2026
+              td
+                span.status-pill.in-stock In Stock
+              td
+                a.edit-link(href='#') Edit

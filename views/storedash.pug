@@ -1,0 +1,119 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Inventory Dashboard
+  link(href='https://googleapis.com' rel='stylesheet')
+  link(rel='stylesheet' href='../css/storedash.css')
+.dashboard-container
+  aside.sidebar
+    .logo-section
+      .logo-icon &#x1F3E2;
+      div
+        h1.brand-name NYONDO
+        p.brand-sub Store Manager
+    nav.nav-menu
+      a.nav-item.active(href='storedash')
+        span.icon &#x1F4CA;
+        |  Dashboard
+      a.nav-item(href='stockreg')
+        span.icon &#x2795;
+        |  Stock Registration
+      a.nav-item(href='invetory')
+        span.icon &#x1F4E6;
+        |  Inventory
+      a.nav-item(href='price')
+        span.icon &#x1F4B2;
+        |  Pricing
+    .sidebar-footer
+      a.nav-item(href='index')
+        span.icon &rarrhk;&#xFE0F;
+        |  Logout
+  main.main-content
+    header.header
+      .header-left
+        h2 Inventory Dashboard
+        p.date-text Tuesday, April 28, 2026
+      .header-right
+        .notification-bell &#x1F514;
+        .user-profile
+          .user-info
+            span.user-name Robert Okello
+            span.user-role Store Manager
+          .user-avatar &#x1F464;
+    section.kpi-grid
+      .card
+        .card-header
+          span.card-icon &#x1F4E6;
+        p.card-label Total Products
+        h3.card-value 7
+      .card
+        .card-header
+          span.card-icon &#x1F4C8;
+          span.badge.badge-stock In Stock
+        p.card-label Total Quantity
+        h3.card-value 1,375
+      .card
+        .card-header
+          span.card-icon $
+        p.card-label Inventory Value
+        h3.card-value 46.8M UGX
+      .card
+        .card-header
+          span.card-icon &#x26A0;&#xFE0F;
+          span.badge.badge-alert Alert
+        p.card-label Low Stock Items
+        h3.card-value.alert-text 1
+    section.alert-banner
+      .alert-info
+        span.alert-symbol &#x26A0;&#xFE0F;
+        div
+          h4 Low Stock Alert
+          p
+            | The following items are running low and need restocking soon:
+      .alert-action-card
+        .item-detail
+          strong Barbed Wire (50m roll)
+          p Current stock: 45 units
+        button.restock-btn Restock Now
+    section.charts-row
+      .chart-box
+        .chart-header
+          h4 Stock Levels Overview
+          span.chart-icon &#x1F4CA;
+        .bar-chart
+          .bar-wrapper
+            .bar-fill(style='height: 160px')
+            span Cement
+          .bar-wrapper
+            .bar-fill(style='height: 70px')
+            span Iron Bars
+          .bar-wrapper
+            .bar-fill(style='height: 110px')
+            span Nails
+          .bar-wrapper
+            .bar-fill(style='height: 40px')
+            span Wire Mesh
+          .bar-wrapper
+            .bar-fill(style='height: 20px')
+            span Barbed Wire
+      .chart-box
+        .chart-header
+          h4 Stock Movement (7 Days)
+          .legend
+            span.dot.dot-green
+            |  In
+            span.dot.dot-red
+            |  Out
+        .line-chart-placeholder
+          svg(viewbox='0 0 400 150')
+            polyline(fill='none' stroke='#10b981' stroke-width='3' points='20,100 80,40 140,80 200,30 260,70 320,10 380,90')
+            polyline(fill='none' stroke='#d32f2f' stroke-width='3' points='20,120 80,110 140,130 200,90 260,80 320,60 380,120')
+          .chart-labels
+            span Mon
+            span Tue
+            span Wed
+            span Thu
+            span Fri
+            span Sat
+            span Sun

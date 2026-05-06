@@ -1,0 +1,64 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Record Credit Purchase
+  link(href='https://googleapis.com' rel='stylesheet')
+  link(rel='stylesheet' href='../css/creditForm.css')
+section.form-container
+  .form-header
+    h3 Record Credit Purchase
+    p Log transactions where products are taken now and settled later.
+  form.nyondo-credit-form(action='/creditForm' method='post')
+    // Party Name
+    .form-row
+      label
+        | Supplier/Customer Name 
+        em (required)
+      .input-wrapper
+        input(type='text' name='customername' placeholder='Enter full name' required='')
+    // Phone Number (Requested)
+    .form-row
+      label
+        | Phone Number 
+        em (Contact)
+      .input-wrapper
+        input(type='tel' name='phonenumber' placeholder='+256 000 000 000' required='')
+    // Address (Requested)
+    .form-row
+      label Physical Address
+      .input-wrapper
+        input(type='text' name='address' placeholder='Village, Town or Building')
+    // NIN Number (Requested)
+    .form-row
+      label
+        | NIN Number 
+        em (Verification)
+      .input-wrapper
+        input(type='text' name='ninnumber' placeholder='CM0000000XXXXX' maxlength='14')
+    // Total Amount
+    .form-row
+      label Total Transaction Value (UGX)
+      .input-wrapper
+        input(type='number' name='totalValue' placeholder='Total cost of all items')
+    // Date of Purchase
+    .form-row
+      label Date of Purchase
+      .input-wrapper
+        input(type='date' name='dateOfPurchase' required='')
+    // Credit Due Date (Requested)
+    .form-row
+      label
+        | Credit Due Date 
+        em (Deadline)
+      .input-wrapper
+        input.highlight-date(type='date' name='duedate' required='')
+    // Items
+    .form-row
+      label Items/Description
+      .input-wrapper
+        textarea(name='textarea' placeholder='List products taken on credit...')
+    // Actions
+    .form-footer
+      button.btn-submit(type='submit') Save Credit Record
+      button.btn-clear(type='reset') Clear Form

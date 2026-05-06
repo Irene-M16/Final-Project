@@ -1,0 +1,91 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Stock Registration
+  link(href='https://googleapis.com' rel='stylesheet')
+  link(rel='stylesheet' href='../css/stockreg.css')
+.dashboard-container
+  // Sidebar
+  aside.sidebar
+    .logo-section
+      .logo-icon &#x1F3E2;
+      div
+        h1.brand-name NYONDO
+        p.brand-sub Store Manager
+    nav.nav-menu
+      a.nav-item(href='storedash')
+        span.icon &#x1F4CA;
+        |  Dashboard
+      a.nav-item.active(href='stockReg')
+        span.icon &#x2795;
+        |  Stock Registration
+      a.nav-item(href='invetory')
+        span.icon &#x1F4E6;
+        |  Inventory
+      a.nav-item(href='price')
+        span.icon &#x1F4B2;
+        |  Pricing
+    .sidebar-footer
+      a.nav-item(href='/')
+        span.icon &rarrhk;&#xFE0F;
+        |  Logout
+  // Main Content
+  main.main-content
+    header.header
+      .header-left
+        h2 Stock Registration
+        p.date-text Tuesday, April 28, 2026
+      .header-right
+        .notification-bell &#x1F514;
+        .user-profile
+          .user-info
+            span.user-name Robert Okello
+            span.user-role Store Manager
+          .user-avatar &#x1F464;
+    // Registration Form Container
+    section.form-card
+      h3 Register New Stock
+      form#stockForm.registration-form(action='/stockReg' method='post')
+        .form-grid
+          .form-group
+            label Product Type
+            select(name='product')
+              option(disabled='') Select product
+              option Cement
+              option Hammer
+              option Iron Sheets
+              option Paint
+              option Tiles
+              option Wires
+          .form-group
+            label Quantity
+            input(type='text' name='quantity' placeholder='Enter quantity' required='')
+          .form-group
+            label Unit Cost (UGX)
+            input(type='text' name='unitCost' placeholder='Purchase price per unit' required='')
+          .form-group
+            label Unit Selling Price (UGX)
+            input(type='text' name='sellingPrice' placeholder='Selling price per unit' required='')
+          .form-group
+            label Supplier
+            select(name='supplier')
+              option(disabled='') Select supplier
+              option Cement
+              option Hammer
+              option Iron Sheets
+              option Paint
+              option Brush
+              option Wires
+          .form-group
+            label Date Received
+            input(type='date' name='date' placeholder='mm/dd/yyyy' required='')
+        .form-group.full-width
+          label Notes (Optional)
+          input(type='text' name='notes' placeholder='Additional information' required='')
+        .form-actions
+          a.btn.primary-btn(href='#') + Add Stock
+          a.btn.secondary-btn(href='#' onclick="\
+          document.getElementById('stockForm').reset();\
+          return false;\
+          ") Clear Form

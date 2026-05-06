@@ -1,0 +1,65 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Add New User Form
+  link(href='https://googleapis.com' rel='stylesheet')
+  link(rel='stylesheet' href='../css/addUser.css')
+section.form-container
+  .form-header
+    h3 Add New User
+    p Create a brand new user and add them to this site.
+  form.nyondo-user-form(action='/addUser' method='post')
+    // Username
+    .form-row
+      label
+        | Username 
+        em (required)
+      .input-wrapper
+        input(type='text' name='username' required='')
+    // Email
+    .form-row
+      label
+        | Email 
+        em (required)
+      .input-wrapper
+        input(type='email' name='email' required='')
+    // First Name
+    .form-row
+      label First Name
+      .input-wrapper
+        input(type='text' name='fname' required='')
+    // Last Name
+    .form-row
+      label Last Name
+      .input-wrapper
+        input(type='text' name='lname' required='')
+    // Website
+    .form-row
+      label Website
+      .input-wrapper
+        input(type='url' name='website')
+    // Password
+    .form-row
+      label Password
+      .input-wrapper
+        button.btn-outline(type='button') Show password
+    // Notification
+    .form-row.checkbox-row
+      label Send User Notification
+      .input-wrapper
+        .checkbox-group
+          input#notify(type='checkbox' name='notification' checked='')
+          label.inline-label(for='notify') Send the new user an email about their account.
+    // Role
+    .form-row
+      label Role
+      .input-wrapper
+        select(name='role')
+          option(disabled='') Select Role
+          option Sales Attendant
+          option Store Manager
+          // <option>Administrator</option>
+    // Submit Action
+    .form-footer
+      button.btn-submit(type='submit') Add New User

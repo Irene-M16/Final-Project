@@ -1,99 +1,99 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nyondo - Add New User Form</title>
-    <link href="https://googleapis.com" rel="stylesheet">
-    <link rel="stylesheet" href="../css/addUser.css">
-</head>
-<body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add New User Form</title>
+    <link href="https://googleapis.com" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/addUser.css" />
+  </head>
+  <body>
     <section class="form-container">
-        <div class="form-header">
-            <h3>Add New User</h3>
-            <p>Create a brand new user and add them to this site.</p>
+      <div class="form-header">
+        <h3>Add New User</h3>
+        <p>Create a brand new user and add them to this site.</p>
+      </div>
+
+      <form action="/addUser" method="post" class="nyondo-user-form">
+        <!-- Username -->
+        <div class="form-row">
+          <label>Username <em>(required)</em></label>
+          <div class="input-wrapper">
+            <input type="text" name="username" required />
+          </div>
         </div>
 
-        <form action="/addUser" method="post" class="nyondo-user-form">
-            <!-- Username -->
-            <div class="form-row">
-                <label>Username <em>(required)</em></label>
-                <div class="input-wrapper">
-                    <input type="text" name="username" required>
-                </div>
-            </div>
+        <!-- Email -->
+        <div class="form-row">
+          <label>Email <em>(required)</em></label>
+          <div class="input-wrapper">
+            <input type="email" name="email" required />
+          </div>
+        </div>
 
-            <!-- Email -->
-            <div class="form-row">
-                <label>Email <em>(required)</em></label>
-                <div class="input-wrapper">
-                    <input type="email" name="email" required>
-                </div>
-            </div>
+        <!-- First Name -->
+        <div class="form-row">
+          <label>First Name</label>
+          <div class="input-wrapper">
+            <input type="text" name="fname" required />
+          </div>
+        </div>
 
-            <!-- First Name -->
-            <div class="form-row">
-                <label>First Name</label>
-                <div class="input-wrapper">
-                    <input type="text" name="fname" required>
-                </div>
-            </div>
+        <!-- Last Name -->
+        <div class="form-row">
+          <label>Last Name</label>
+          <div class="input-wrapper">
+            <input type="text" name="lname" required />
+          </div>
+        </div>
 
-            <!-- Last Name -->
-            <div class="form-row">
-                <label>Last Name</label>
-                <div class="input-wrapper">
-                    <input type="text" name="lname" required>
-                </div>
-            </div>
+        <!-- Website -->
+        <div class="form-row">
+          <label>Website</label>
+          <div class="input-wrapper">
+            <input type="url" name="website" />
+          </div>
+        </div>
 
-            <!-- Website -->
-            <div class="form-row">
-                <label>Website</label>
-                <div class="input-wrapper">
-                    <input type="url" name="website">
-                </div>
-            </div>
+        <!-- Password -->
+        <div class="form-row">
+          <label>Password</label>
+          <div class="input-wrapper">
+            <button type="button" class="btn-outline">Show password</button>
+          </div>
+        </div>
 
-            <!-- Password -->
-            <div class="form-row">
-                <label>Password</label>
-                <div class="input-wrapper">
-                    <button type="button" class="btn-outline">Show password</button>
-                </div>
+        <!-- Notification -->
+        <div class="form-row checkbox-row">
+          <label>Send User Notification</label>
+          <div class="input-wrapper">
+            <div class="checkbox-group">
+              <input type="checkbox" name="notification" id="notify" checked />
+              <label for="notify" class="inline-label"
+                >Send the new user an email about their account.</label
+              >
             </div>
+          </div>
+        </div>
 
-            <!-- Notification -->
-            <div class="form-row checkbox-row">
-                <label>Send User Notification</label>
-                <div class="input-wrapper">
-                    <div class="checkbox-group">
-                        <input type="checkbox" name="notification" id="notify" checked>
-                        <label for="notify" class="inline-label">Send the new user an email about their account.</label>
-                    </div>
-                </div>
-            </div>
+        <!-- Role -->
+        <div class="form-row">
+          <label>Role</label>
+          <div class="input-wrapper">
+            <select name="role">
+              <option disabled>Select Role</option>
+              <option>Sales Attendant</option>
+              <option>Store Manager</option>
+              <!-- <option>Administrator</option> -->
+            </select>
+          </div>
+        </div>
 
-            <!-- Role -->
-            <div class="form-row">
-                <label>Role</label>
-                <div class="input-wrapper">
-                    <select name="role">
-                        <option disabled>Select Role</option>
-                        <option>Sales Attendant</option>
-                        <option>Store Manager</option>
-                        <!-- <option>Administrator</option> -->
-                    </select>
-                </div>
-            </div>
-
-            <!-- Submit Action -->
-            <div class="form-footer">
-                <button type="submit" class="btn-submit">Add New User</button>
-            </div>
-        </form>
+        <!-- Submit Action -->
+        <div class="form-footer">
+          <button type="submit" class="btn-submit">Add New User</button>
+        </div>
+      </form>
     </section>
-
-</body>
+  </body>
 </html>

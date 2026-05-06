@@ -1,0 +1,123 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Pricing Management
+  link(href='https://googleapis.com' rel='stylesheet')
+  link(rel='stylesheet' href='../css/price.css')
+.dashboard-container
+  // Sidebar
+  aside.sidebar
+    .logo-section
+      .logo-icon &#x1F3E2;
+      div
+        h1.brand-name NYONDO
+        p.brand-sub Store Manager
+    nav.nav-menu
+      a.nav-item(href='storedash')
+        span.icon &#x1F4CA;
+        |  Dashboard
+      a.nav-item(href='stockreg')
+        span.icon &#x2795;
+        |  Stock Registration
+      a.nav-item(href='invetory')
+        span.icon &#x1F4E6;
+        |  Inventory
+      a.nav-item.active(href='price')
+        span.icon &#x1F4B2;
+        |  Pricing
+    .sidebar-footer
+      a.nav-item(href='../html/index.html')
+        span.icon &rarrhk;&#xFE0F;
+        |  Logout
+  // Main Content
+  main.main-content
+    header.header
+      .header-left
+        h2 Pricing Management
+        p.date-text Tuesday, April 28, 2026
+      .header-right
+        .notification-bell &#x1F514;
+        .user-profile
+          .user-info
+            span.user-name Robert Okello
+            span.user-role Store Manager
+          .user-avatar &#x1F464;
+    // Pricing Card
+    section.pricing-card
+      .pricing-header
+        h3 Product Pricing
+        p Manage pricing for all products
+      .table-container
+        table
+          thead
+            tr
+              th Product Name
+              th Unit Cost
+              th Current Price
+              th Profit Margin
+              th Actions
+          tbody
+            tr
+              td Cement (50kg bag)
+              td.text-muted 32,000 UGX
+              td
+                strong 35,000 UGX
+              td
+                span.margin-badge.margin-low 9.4%
+              td
+                a.btn-update(href='#') Update Price
+            tr
+              td Iron Bars 12mm (6m)
+              td.text-muted 25,000 UGX
+              td
+                strong 28,000 UGX
+              td
+                span.margin-badge.margin-good 12.0%
+              td
+                a.btn-update(href='#') Update Price
+            tr
+              td Iron Bars 16mm (6m)
+              td.text-muted 40,000 UGX
+              td
+                strong 45,000 UGX
+              td
+                span.margin-badge.margin-good 12.5%
+              td
+                a.btn-update(href='#') Update Price
+            tr
+              td Nails 1kg
+              td.text-muted 7,000 UGX
+              td
+                strong 8,000 UGX
+              td
+                span.margin-badge.margin-good 14.3%
+              td
+                a.btn-update(href='#') Update Price
+            tr
+              td Wire Mesh (2m x 3m)
+              td.text-muted 58,000 UGX
+              td
+                strong 65,000 UGX
+              td
+                span.margin-badge.margin-good 12.1%
+              td
+                a.btn-update(href='#') Update Price
+            tr
+              td Barbed Wire (50m roll)
+              td.text-muted 38,000 UGX
+              td
+                strong 42,000 UGX
+              td
+                span.margin-badge.margin-good 10.5%
+              td
+                a.btn-update(href='#') Update Price
+            tr
+              td Iron Sheets (3m)
+              td.text-muted 34,000 UGX
+              td
+                strong 38,000 UGX
+              td
+                span.margin-badge.margin-good 11.8%
+              td
+                a.btn-update(href='#') Update Price

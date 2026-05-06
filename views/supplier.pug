@@ -1,0 +1,98 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Supplier Credit
+  link(href='https://googleapis.com' rel='stylesheet')
+  link(rel='stylesheet' href='../css/supplier.css')
+.page-wrapper
+  // Sidebar: Natural Scroll Column
+  aside.sidebar
+    .sidebar-top
+      .logo-section
+        .logo-icon &#x1F3E2;
+        div
+          h1.brand-name NYONDO
+          p.brand-sub Admin Portal
+      nav.nav-menu
+        a.nav-item(href='adminDash.html')
+          span.icon &#x1F4CA;
+          |  Dashboard
+        a.nav-item(href='userReg.html')
+          span.icon &#x1F465;
+          |  Users
+        a.nav-item.active(href='supplier.html')
+          span.icon &#x1F4B3;
+          |  Supplier Credit
+        a.nav-item(href='depositScheme.html')
+          span.icon &#x1F3E6;
+          |  Deposit Scheme
+        a.nav-item(href='transport.html')
+          span.icon &#x1F69B;
+          |  Transport Charges
+        a.nav-item(href='reports.html')
+          span.icon &#x1F4CB;
+          |  Reports
+    .sidebar-bottom
+      a.nav-item.logout-link(href='#')
+        span.icon &rarrhk;&#xFE0F;
+        |  Logout
+  // Main Content Area
+  main.main-content
+    // ORGANIZED HEADER
+    header.header
+      .header-left
+        h2 Supplier Credit Tracking
+        p.date-text Wednesday, April 29, 2026
+      .header-right
+        .bell-box
+          span.icon-bell &#x1F514;
+          span.red-dot
+        .header-divider
+        .user-profile
+          .user-text
+            span.user-name David Musoke
+            span.user-role Administrator
+          .user-avatar-circle &#x1F464;
+    // Search and Action Row
+    section.table-controls
+      .search-box
+        span.search-icon &#x1F50D;
+        input(type='text' placeholder='Search suppliers...')
+      a.primary-btn(href='creditForm.html') + Record Credit Purchase
+    // Credit Table
+    section.table-card
+      .table-container
+        table
+          thead
+            tr
+              th Supplier Name
+              th Total Credit
+              th Amount Paid
+              th Balance
+              th Due Date
+              th Status
+              th Actions
+          tbody
+            tr
+              td Hima Cement
+              td
+                strong 15,000,000
+              td 10,000,000
+              td.red-text 5,000,000
+              td Apr 30, 2026
+              td
+                span.status-pill.pending Pending
+              td
+                a.record-pay-btn(href='#') Record Payment
+            tr
+              td Wire Industries
+              td
+                strong 4,800,000
+              td 2,000,000
+              td.red-text 2,800,000
+              td Apr 10, 2026
+              td
+                span.status-pill.overdue Overdue
+              td
+                a.record-pay-btn(href='#') Record Payment

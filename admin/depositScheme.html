@@ -1,167 +1,166 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nyondo Admin - Deposit Scheme</title>
-    <link href="https://googleapis.com" rel="stylesheet">
-    <link rel="stylesheet" href="../css/depositScheme.css">
-</head>
-<body>
-
-<div class="page-wrapper">
-    <!-- Sidebar: Natural Scroll Layout -->
-    <aside class="sidebar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deposit Scheme</title>
+    <link href="https://googleapis.com" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/depositScheme.css" />
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <!-- Sidebar: Natural Scroll Layout -->
+      <aside class="sidebar">
         <div class="sidebar-top">
-            <div class="logo-section">
-                <div class="logo-icon">🏢</div>
-                <div>
-                    <h1 class="brand-name">NYONDO</h1>
-                    <p class="brand-sub">Admin Portal</p>
-                </div>
+          <div class="logo-section">
+            <div class="logo-icon">🏢</div>
+            <div>
+              <h1 class="brand-name">NYONDO</h1>
+              <p class="brand-sub">Admin Portal</p>
             </div>
+          </div>
 
-            <nav class="nav-menu">
-                <a href="adminDash" class="nav-item"><span class="icon">📊</span> Dashboard</a>
-                <a href="userReg" class="nav-item"><span class="icon">👥</span> Users</a>
-                <a href="supplier" class="nav-item"><span class="icon">💳</span> Supplier Credit</a>
-                <a href="depositScheme" class="nav-item active"><span class="icon">📑</span> Deposit Scheme</a>
-                <a href="transport" class="nav-item"><span class="icon">🚛</span> Transport Charges</a>
-                <a href="reports" class="nav-item"><span class="icon">📋</span> Reports</a>
-            </nav>
+          <nav class="nav-menu">
+            <a href="adminDash" class="nav-item"
+              ><span class="icon">📊</span> Dashboard</a
+            >
+            <a href="userReg" class="nav-item"
+              ><span class="icon">👥</span> Users</a
+            >
+            <a href="supplier" class="nav-item"
+              ><span class="icon">💳</span> Supplier Credit</a
+            >
+            <a href="depositScheme" class="nav-item active"
+              ><span class="icon">📑</span> Deposit Scheme</a
+            >
+            <a href="transport" class="nav-item"
+              ><span class="icon">🚛</span> Transport Charges</a
+            >
+            <a href="reports" class="nav-item"
+              ><span class="icon">📋</span> Reports</a
+            >
+          </nav>
         </div>
 
         <div class="sidebar-bottom">
-            <a href="login.html" class="nav-item logout-link">
-                <span class="icon">↪️</span> Logout
-            </a>
+          <a href="login.html" class="nav-item logout-link">
+            <span class="icon">↪️</span> Logout
+          </a>
         </div>
-    </aside>
+      </aside>
 
-    <!-- Main Content -->
-    <main class="main-content">
+      <!-- Main Content -->
+      <main class="main-content">
         <!-- Organized Header -->
         <header class="header">
-            <div class="header-left">
-                <h2>Deposit Scheme Management</h2>
-                <p class="date-text">Friday, May 1, 2026</p>
-            </div>
+          <div class="header-left">
+            <h2>Deposit Scheme Management</h2>
+            <p class="date-text">Friday, May 1, 2026</p>
+          </div>
 
-            <div class="header-right">
-                <div class="bell-box">
-                    <span class="icon-bell">🔔</span>
-                    <span class="red-dot"></span>
-                </div>
-                <div class="header-divider"></div>
-                <div class="user-profile">
-                    <div class="user-text">
-                        <span class="user-name">David Musoke</span>
-                        <span class="user-role">Administrator</span>
-                    </div>
-                    <div class="user-avatar-circle">👤</div>
-                </div>
+          <div class="header-right">
+            <div class="bell-box">
+              <span class="icon-bell">🔔</span>
+              <span class="red-dot"></span>
             </div>
+            <div class="header-divider"></div>
+            <div class="user-profile">
+              <div class="user-text">
+                <span class="user-name">David Musoke</span>
+                <span class="user-role">Administrator</span>
+              </div>
+              <div class="user-avatar-circle">👤</div>
+            </div>
+          </div>
         </header>
 
         <!-- Search and Action Row -->
         <section class="table-controls">
-            <div class="search-box">
-                <span class="search-icon">🔍</span>
-                <input type="text" placeholder="Search by name or NIN...">
-            </div>
-            <a href="formDeposit.html" class="primary-btn">+ Register Customer</a>
+          <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" placeholder="Search by name or NIN..." />
+          </div>
+          <a href="formDeposit.html" class="primary-btn">+ Register Customer</a>
         </section>
 
         <!-- Guidelines Info Box -->
         <div class="guidelines-box">
-            <span class="info-circle">ⓘ</span>
-            <div class="guidelines-text">
-                <strong>Deposit Scheme Guidelines</strong>
-                <p>Customers register with full name (as per National ID), NIN, and phone number. Eligible products: Cement, Iron Sheets, Iron Bars. Issue temporary receipts for all deposits.</p>
-            </div>
+          <span class="info-circle">ⓘ</span>
+          <div class="guidelines-text">
+            <strong>Deposit Scheme Guidelines</strong>
+            <p>
+              Customers register with full name (as per National ID), NIN, and
+              phone number. Eligible products: Cement, Iron Sheets, Iron Bars.
+              Issue temporary receipts for all deposits.
+            </p>
+          </div>
         </div>
 
         <!-- Deposits Table (Optimized for no scroll) -->
         <section class="table-card">
-            <table class="no-scroll-table">
-                <thead>
-                    <tr>
-                        <th>Customer Name</th>
-                        <th>NIN</th>
-                        <th>Phone Number</th>
-                        <th>Total Deposits</th>
-                        <th>Product</th>
-                        <th>Registered Date</th>
-                        <th>Last Deposit</th>
-                        <th>Status</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Mukasa James</strong></td>
-                        <td class="text-muted">CM9012345678901</td>
-                        <td>0701234567</td>
-                        <td class="deposit-amt">850,000 UGX</td>
-                        <td>Cement</td>
-                        <td>Mar 15, 2026</td>
-                        <td>Apr 10, 2026</td>
-                        <td><span class="status-pill blue">Active</span></td>
-                        <td><a href="#" class="action-link">Add Deposit</a></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Nakato Sarah</strong></td>
-                        <td class="text-muted">CF8901234567890</td>
-                        <td>0712345678</td>
-                        <td class="deposit-amt">1,200,000 UGX</td>
-                        <td>Iron Sheets</td>
-                        <td>Feb 20, 2026</td>
-                        <td>Apr 12, 2026</td>
-                        <td><span class="status-pill blue">Active</span></td>
-                        <td><a href="#" class="action-link">Add Deposit</a></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Wasswa Paul</strong></td>
-                        <td class="text-muted">CM8712345678902</td>
-                        <td>0723456789</td>
-                        <td class="deposit-amt">650,000 UGX</td>
-                        <td>Iron Bars</td>
-                        <td>Mar 28, 2026</td>
-                        <td>Apr 08, 2026</td>
-                        <td><span class="status-pill blue">Active</span></td>
-                        <td><a href="#" class="action-link">Add Deposit</a></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Nambi Grace</strong></td>
-                        <td class="text-muted">CF9123456789013</td>
-                        <td>0734567890</td>
-                        <td class="deposit-amt">1,500,000 UGX</td>
-                        <td>Cement</td>
-                        <td>Jan 10, 2026</td>
-                        <td>Apr 14, 2026</td>
-                        <td><span class="status-pill green">Ready</span></td>
-                        <td><a href="#" class="action-link">Collect Items</a></td>
-                    </tr>
-                </tbody>
-            </table>
+          <table class="no-scroll-table">
+            <thead>
+              <tr>
+                <th>Customer Name</th>
+                <th>NIN</th>
+                <th>Phone Number</th>
+                <th>Total Deposits</th>
+                <th>Product</th>
+                <th>Registered Date</th>
+                <th>Last Deposit</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Mukasa James</strong></td>
+                <td class="text-muted">CM9012345678901</td>
+                <td>0701234567</td>
+                <td class="deposit-amt">850,000 UGX</td>
+                <td>Cement</td>
+                <td>Mar 15, 2026</td>
+                <td>Apr 10, 2026</td>
+                <td><span class="status-pill blue">Active</span></td>
+                <td><a href="#" class="action-link">Add Deposit</a></td>
+              </tr>
+              <tr>
+                <td><strong>Nakato Sarah</strong></td>
+                <td class="text-muted">CF8901234567890</td>
+                <td>0712345678</td>
+                <td class="deposit-amt">1,200,000 UGX</td>
+                <td>Iron Sheets</td>
+                <td>Feb 20, 2026</td>
+                <td>Apr 12, 2026</td>
+                <td><span class="status-pill blue">Active</span></td>
+                <td><a href="#" class="action-link">Add Deposit</a></td>
+              </tr>
+              <tr>
+                <td><strong>Wasswa Paul</strong></td>
+                <td class="text-muted">CM8712345678902</td>
+                <td>0723456789</td>
+                <td class="deposit-amt">650,000 UGX</td>
+                <td>Iron Bars</td>
+                <td>Mar 28, 2026</td>
+                <td>Apr 08, 2026</td>
+                <td><span class="status-pill blue">Active</span></td>
+                <td><a href="#" class="action-link">Add Deposit</a></td>
+              </tr>
+              <tr>
+                <td><strong>Nambi Grace</strong></td>
+                <td class="text-muted">CF9123456789013</td>
+                <td>0734567890</td>
+                <td class="deposit-amt">1,500,000 UGX</td>
+                <td>Cement</td>
+                <td>Jan 10, 2026</td>
+                <td>Apr 14, 2026</td>
+                <td><span class="status-pill green">Ready</span></td>
+                <td><a href="#" class="action-link">Collect Items</a></td>
+              </tr>
+            </tbody>
+          </table>
         </section>
-    </main>
-</div>
-
-</body>
+      </main>
+    </div>
+  </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

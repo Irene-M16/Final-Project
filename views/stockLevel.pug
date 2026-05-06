@@ -1,0 +1,111 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Check Stock
+  link(href='https://googleapis.com' rel='stylesheet')
+  link(rel='stylesheet' href='../css/stockLevel.css')
+.dashboard-container
+  // Sidebar
+  aside.sidebar
+    .logo-section
+      .logo-icon &#x1F3E2;
+      div
+        h1.brand-name NYONDO
+        p.brand-sub Sales Portal
+    nav.nav-menu
+      a.nav-item(href='sales-dash.html')
+        span.icon &#x1F4CA;
+        |  Dashboard
+      a.nav-item(href='record.html')
+        span.icon &#x1F6D2;
+        |  Record Sale
+      a.nav-item.active(href='stockLevel.html')
+        span.icon &#x1F4E6;
+        |  Check Stock
+      a.nav-item(href='receipts.html')
+        span.icon &#x1F4D1;
+        |  Receipts
+    .sidebar-footer
+      a.nav-item(href='#')
+        span.icon &rarrhk;&#xFE0F;
+        |  Logout
+  // Main Content
+  main.main-content
+    header.header
+      .header-left
+        h2 Check Stock
+        p.date-text Tuesday, April 28, 2026
+      .header-right
+        .notification-bell &#x1F514;
+        .user-profile
+          .user-info
+            span.user-name Jane Namubiru
+            span.user-role Sales Attendant
+          .user-avatar &#x1F464;
+    // Stock Table Section
+    section.table-section
+      .table-header-row
+        h3.section-title Current Stock Levels
+        .search-container
+          span.search-icon &#x1F50D;
+          input.search-input(type='text' placeholder='Search products...')
+      .table-container
+        table
+          thead
+            tr
+              th Product Name
+              th Unit Price (UGX)
+              th Stock Quantity
+              th Stock Value (UGX)
+              th Status
+          tbody
+            tr
+              td Cement (50kg bag)
+              td 35,000
+              td 450 units
+              td 15,750,000
+              td
+                span.status-pill.success In Stock
+            tr
+              td Iron Bars 12mm (6m)
+              td 28,000
+              td 180 units
+              td 5,040,000
+              td
+                span.status-pill.success In Stock
+            tr
+              td Iron Bars 16mm (6m)
+              td 45,000
+              td 120 units
+              td 5,400,000
+              td
+                span.status-pill.success In Stock
+            tr
+              td Nails 1kg
+              td 8,000
+              td 300 units
+              td 2,400,000
+              td
+                span.status-pill.success In Stock
+            tr
+              td Wire Mesh (2m x 3m)
+              td 65,000
+              td 80 units
+              td 5,200,000
+              td
+                span.status-pill.warning Medium
+            tr
+              td Barbed Wire (50m roll)
+              td 42,000
+              td 95 units
+              td 3,990,000
+              td
+                span.status-pill.warning Medium
+            tr
+              td Iron Sheets (3m)
+              td 38,000
+              td 200 units
+              td 7,600,000
+              td
+                span.status-pill.success In Stock

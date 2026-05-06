@@ -1,0 +1,125 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Admin Dashboard
+  link(href='https://googleapis.com' rel='stylesheet')
+  link(rel='stylesheet' href='../css/adminDash.css')
+.page-wrapper
+  // Sidebar: Natural Scroll Column behavior
+  aside.sidebar
+    .sidebar-top
+      .logo-section
+        .logo-icon &#x1F3E2;
+        div
+          h1.brand-name NYONDO
+          p.brand-sub Admin Portal
+      nav.nav-menu
+        a.nav-item.active(href='adminDash')
+          span.icon &#x1F4CA;
+          |  Dashboard
+        a.nav-item(href='userReg')
+          span.icon &#x1F465;
+          |  Users
+        a.nav-item(href='supplier')
+          span.icon &#x1F4B3;
+          |  Supplier Credit
+        a.nav-item(href='depositScheme')
+          span.icon &#x1F3E6;
+          |  Deposit Scheme
+        a.nav-item(href='transport')
+          span.icon &#x1F69B;
+          |  Transport Charges
+        a.nav-item(href='reports')
+          span.icon &#x1F4CB;
+          |  Reports
+    .sidebar-bottom
+      a.nav-item.logout-link(href='#')
+        span.icon &rarrhk;&#xFE0F;
+        |  Logout
+  // Main Content Area
+  main.main-content
+    // THE ORGANIZED HEADER
+    header.header
+      .header-left
+        h2 Admin Dashboard
+        p.date-text Wednesday, April 29, 2026
+      .header-right
+        // 1. Notification Bell
+        .bell-box
+          span.icon-bell &#x1F514;
+          span.red-dot
+        // 2. Vertical Divider Line
+        .header-divider
+        // 3. User Profile Area
+        .user-profile
+          .user-text
+            span.user-name David Musoke
+            span.user-role Administrator
+          .user-avatar-circle &#x1F464;
+    // KPI Cards Grid
+    section.kpi-grid
+      .card
+        p.card-label Total Users
+        h3.card-value 4
+      .card
+        p.card-label Supplier Credit
+        h3.card-value 11M UGX
+      .card
+        p.card-label Active Deposits
+        h3.card-value 4.2M UGX
+      .card
+        p.card-label Transport Revenue
+        h3.card-value 900K UGX
+    // Overdue Alert
+    section.alert-banner
+      .alert-info
+        span.alert-symbol !
+        div
+          h4 Overdue Supplier Payment
+          p The following supplier payment is overdue and requires immediate attention:
+      .alert-action-card
+        .item-detail
+          strong Wire Industries
+          p Balance: 2,800,000 UGX &bull; Due: Apr 10, 2026
+        button.record-btn Record Payment
+    // Bottom Content Grid
+    section.bottom-grid
+      .content-card
+        h3.card-title Recent Transport Charges
+        .transport-list
+          .transport-item
+            div
+              p(style='font-weight:600;') Apr 14, 2026
+              p(style='font-size:12px;color:#888;') 8 charged &bull; 15 free
+            span(style='color:#d32f2f; font-weight:700;') 240,000 UGX
+        .transport-list
+          .transport-item
+            div
+              p(style='font-weight:600;') Apr 14, 2026
+              p(style='font-size:12px;color:#888;') 8 charged &bull; 15 free
+            span(style='color:#d32f2f; font-weight:700;') 240,000 UGX
+        .transport-list
+          .transport-item
+            div
+              p(style='font-weight:600;') Apr 14, 2026
+              p(style='font-size:12px;color:#888;') 8 charged &bull; 15 free
+            span(style='color:#d32f2f; font-weight:700;') 240,000 UGX
+      // Deposit Scheme Summary Card
+      .deposit-card
+        h3.deposit-title Deposit Scheme Summary
+        // Gray Stats Box
+        .stats-container
+          .stat-row
+            span.stat-label Active Customers
+            span.stat-value 4
+          .stat-row
+            span.stat-label Total Deposits
+            span.stat-value.red-text 4,200,000 UGX
+          .stat-row
+            span.stat-label Ready for Collection
+            span.collection-badge 1 Customer
+        // Green Products Box
+        .eligible-products-box
+          h4.eligible-title Eligible Products
+          p.product-names Cement &bull; Iron Sheets &bull; Iron Bars
