@@ -13,7 +13,7 @@ head
   .login-card
     h2 Login to System
     p.subtitle Select your role and enter credentials
-    form.login-form(action='/login' method='post')
+    form.login-form(action='/auth/login' method='post')
       .form-group
         label User Role
         select(name='role' required='')
@@ -35,4 +35,4 @@ head
     // Footer-links
     .login-footer
       a.forgot-link(href='forgotPassword.html') Forgot password?
-      a.back-link(href='index.html') &larr; Back to Home
+      a.back-link(href='/') &larr; Back to Home
